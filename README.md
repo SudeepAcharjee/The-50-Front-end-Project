@@ -2,7 +2,7 @@
 This repository contains 50 frontend projects that were developed to help developers learn and improve their skills in web development. Each project has its own folder and contains all the necessary files, including HTML, CSS, JavaScript, React,Bootstrap and Talwind css.
 
 # Projects 
-1.Company-Portfolio <br>
+<a href="https://company-portfolio-1.netlify.app/">1.Company-Portfolio</a> <br>
 <a href="https://blogger-sudeep.netlify.app/">2.Blog-Website </a><br>
 3.E-book Website<br>
 4.E-commerce Website<br>
