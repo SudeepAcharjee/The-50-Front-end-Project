@@ -3,7 +3,7 @@ This repository contains 50 frontend projects that were developed to help develo
 
 # Projects 
 1.Company-Portfolio <br>
-2.Blog-Website <br>
+<a href="https://blogger-sudeep.netlify.app/">2.Blog-Website </a><br>
 3.E-book Website<br>
 4.E-commerce Website<br>
 5.Resturant Website<br>
