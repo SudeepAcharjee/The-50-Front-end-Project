@@ -10,7 +10,7 @@ This repository contains 50 frontend projects that were developed to help develo
 <a href="https://hotel-landing-06.netlify.app/">6.Hotel Website</a><br>
 7.Photography Portfolio Website<br>
 8.Fitness Website<br>
-9.Password Generator<br>
+<a href="https://generate-pass5.netlify.app/">9.Password Generator</a><br>
 10.QR code Generator<br>
 11.Weather App<br>
 12.Tic-Tac-Toe Game<br>
