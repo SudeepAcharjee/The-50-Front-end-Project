@@ -7,7 +7,7 @@ This repository contains 50 frontend projects that were developed to help develo
 <a href="https://e-book-03.netlify.app/">3.E-book Website</a><br>
 <a href="https://thrift-flip-store.netlify.app/">4.E-commerce Website</a><br>
 <a href="https://resutrantcode.netlify.app/">5.Resturant Website</a><br>
-6.Hotel Website<br>
+<a href="https://hotel-landing-06.netlify.app/">6.Hotel Website</a><br>
 7.Photography Portfolio Website<br>
 8.Fitness Website<br>
 9.Password Generator<br>
