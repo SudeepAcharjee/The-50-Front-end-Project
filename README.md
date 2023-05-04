@@ -13,7 +13,7 @@ This repository contains 50 frontend projects that were developed to help develo
 <a href="https://generate-pass5.netlify.app/">9.Password Generator </a><br>
 10.QR code Generator<br>
 11.Weather App<br>
-12.Tic-Tac-Toe Game<br>
+<a href="https://tic-tac-toe-sdev.netlify.app/">12.Tic-Tac-Toe Game</a><br>
 13.Link Shorten Website<br>
 14.Drawing App<br>
 15.Food Delivery App<br>
