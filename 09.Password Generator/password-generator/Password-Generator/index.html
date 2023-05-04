@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Generate a <span> random password</span></h1>
+        <h2>Never use an insecure password again.</h2>
+      </header>
+      <div class="buttons">
+        <button>
+          <img src="./Iconlight.png" alt="light-icon" /><span>
+            Generate passwords</span
+          >
+        </button>
+        <input
+          placeholder="Password length"
+          type="number"
+          id="passwordLength"
+          class="input-second"
+        />
+      </div>
+      <section class="input-container">
+        <input type="text" class="input--password" name="" id="firstPassword" />
+        <input type="text" class="input--password" name="" id="secondPasword" />
+        <input type="text" class="input--password" name="" id="thirdPasword" />
+        <input type="text" class="input--password" name="" id="fourthPasword" />
+      </section>
+      <p class="error-message">message</p>
+      <div>
+        <label>Special characters</label>
+        <input type="range" min="0" max="1" value="1" id="special-char" />
+      </div>
+      <div>
+        <label>Uppercase</label>
+        <input type="range" min="0" max="1" value="1" id="uperrcase" />
+      </div>
+    </main>
+    <script src="my.js"></script>
+  </body>
+</html>
