@@ -2,11 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Link Shortener</title>
 </head>
 <body>
-    Will be Added
+    <div class="container">
+        <div class="text__container">
+            <h2>Short your link</h2>
+            <p>Paste your link here we will provide you with a shorter version that you will be able to use anywhere.</p>
+        </div>
+
+        <div class="error__msg">
+            <span id="error">You must paste a valed URL</span>
+        </div>
+
+        <form class="shortener__container">
+            <div class="back__color"></div>
+            <div class="input__container">
+                <input type="text" id="shortener" placeholder="Paste your link here">
+                <button id="submit__btn">Short it!</button>
+            </div>
+        </form>
+
+        <div class="links__container">
+            <!-- <div class="link">
+                <span class="long__link">www.hello.com</span>
+                <span class="short__link">http://sho/link/j8t5</span>
+                <button class="copy__btn">Copy</button>
+            </div> -->
+
+            <!-- <div class="link">
+                <span class="long__link">www.bye.com</span>
+                <span class="short__link">http://sho/link/7hk9</span>
+                <button class="copy__btn">Copy</button>
+            </div> -->
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
 </body>
 </html>

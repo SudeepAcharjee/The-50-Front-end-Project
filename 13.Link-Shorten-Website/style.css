@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+:root{
+    --red: #ff7c7c;
+    --black: #21243d;
+    --blue: #88e1f2;
+    --yellow: #ffd082;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.text__container{
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: var(--blue);
+    color: var(--black);
+    padding: 1rem 0 3rem 0;
+}
+
+.text__container p{
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
+/* FORM */
+.shortener__container{
+    height: 120px;
+    width: 100%;
+}
+
+.back__color{
+    background-color: var(--blue);
+    height: 50px;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 200px;
+    left: 0;
+}
+
+.input__container{
+    z-index: 9;
+    background-color: var(--yellow);
+    margin: 15px auto;
+    max-width: 800px;
+    height: 70px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.input__container input{
+    height: 35px;
+    width: 80%;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 1rem;
+    color: var(--black);
+    font-size: 16px;
+}
+
+.input__container button{
+    height: 35px;
+    width: 80%;
+    margin: auto;
+    background-color: var(--red);
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.error__msg{
+    background-color: var(--red);
+    max-width: 300px;
+    position: fixed;
+    top: 196px;
+    left: 50%;
+    transform: translateX(50%);
+    margin: auto;
+    z-index: 6;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    visibility: hidden;
+    transition: all 0.8s ease-in;
+}
+
+.error__msg #error{
+    color: white;
+    padding: 10px;
+}
+
+.error__msg.show{
+    visibility: visible;
+    transform: translateX(-150%);
+}
+
+/* LINKS CONTAINER */
+
+.links__container{
+    max-width: 800px;
+    margin: auto;
+}
+
+.links__container .link{
+    border: var(--yellow) 1px solid;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: 3fr 3fr 1fr;
+}
+
+.link .long__link{
+    color: var(--red);
+    margin-left: 1rem;
+}
+
+.link .short__link{
+    display: flex;
+    justify-content: center;
+}
+
+.link .copy__btn{
+    background-color: var(--blue);
+    padding: 3px 0;
+    width: 60px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
