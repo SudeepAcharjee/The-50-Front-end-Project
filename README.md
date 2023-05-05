@@ -11,7 +11,7 @@ This repository contains 50 frontend projects that were developed to help develo
 <a href="https://photography-portfolio07.netlify.app/">7.Photography Portfolio Website</a><br>
 <a href="https://fitness-portfolio8.netlify.app/">8.Fitness Website</a><br>
 <a href="https://generate-pass5.netlify.app/">9.Password Generator </a><br>
-10.QR code Generator<br>
+<A HREF="https://qr-code-generator10.netlify.app/">10.QR code Generator</a><br>
 11.Weather App<br>
 <a href="https://tic-tac-toe-sdev.netlify.app/">12.Tic-Tac-Toe Game</a><br>
 13.Link Shorten Website<br>
