@@ -9,7 +9,7 @@ This repository contains 50 frontend projects that were developed to help develo
 <a href="https://resutrantcode.netlify.app/">5.Resturant Website</a><br>
 <a href="https://hotel-landing-06.netlify.app/">6.Hotel Website</a><br>
 <a href="https://photography-portfolio07.netlify.app/">7.Photography Portfolio Website</a><br>
-8.Fitness Website<br>
+<a href="https://fitness-portfolio8.netlify.app/">8.Fitness Website</a><br>
 <a href="https://generate-pass5.netlify.app/">9.Password Generator </a><br>
 10.QR code Generator<br>
 11.Weather App<br>
