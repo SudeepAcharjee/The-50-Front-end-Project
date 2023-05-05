@@ -54,7 +54,7 @@ This repository contains 50 frontend projects that were developed to help develo
 50.Drag&Drop to upload in Cloud<br>
 # Installation
 To use these projects, simply clone or download the repository to your local machine:
-<p>git clone https://github.com/yourusername/50-frontend-projects.git</p>
+<p>git clone https://github.com/SudeepAcharjee/The-50-Front-end-Project.git</p>
   
 # Usage
 Each project is contained within its own folder. To view the project, simply open the index.html file in your web browser. The CSS and JavaScript files are also included within the project folder.
@@ -63,4 +63,4 @@ If you would like to contribute to this repository, feel free to submit a pull r
 # License
 This project is licensed under the Boost Software License 1.0  - see the <a href="https://github.com/SudeepAcharjee/The-50-Front-end-Project/blob/main/LICENSE">LICENSE </a> file for details.
 ## Contributors
-<a href="https://github.com/SudeepAcharjee">1.Sudeep Acharjee</a>
+<a href="https://sudeep-portfolio.netlify.app">1.Sudeep Acharjee</a>
