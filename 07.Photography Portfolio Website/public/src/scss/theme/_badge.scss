@@ -1,0 +1,14 @@
+/* -------------------------------------------------------------------------- */
+/*                                    Badge                                   */
+/* -------------------------------------------------------------------------- */
+
+.badge-rotate{
+  z-index: 1;
+  transform: rotate(-45deg) translate(-30%,-50%);
+  position: absolute;
+  padding: 0.25rem;
+  padding-left: map_get($spacers, 5);
+  padding-right: map_get($spacers, 5);
+  left: -0.4rem; // prev: 0
+  top: 2rem; //- prev: 1.8
+}

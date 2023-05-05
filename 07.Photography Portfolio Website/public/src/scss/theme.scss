@@ -1,0 +1,27 @@
+/* -------------------------------------------------------------------------- */
+/*                                 Theme                                      */
+/* -------------------------------------------------------------------------- */
+
+@import "../../node_modules/bootstrap/scss/_functions";
+@import "theme/functions";
+
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "theme/mixins";
+
+@import "user-variables";
+@import "theme/variables";
+@import 'theme/_utilities';
+@import "../../node_modules/bootstrap/scss/variables";
+
+@import "../../node_modules/bootstrap/scss/root";
+@import 'theme/root';
+
+/*-----------------------------------------------
+|   Bootstrap Styles
+-----------------------------------------------*/
+@import "bootstrap";
+
+/*-----------------------------------------------
+|   Theme Styles
+-----------------------------------------------*/
+@import "theme/theme";

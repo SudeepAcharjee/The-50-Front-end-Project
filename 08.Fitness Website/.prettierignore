@@ -1,0 +1,2 @@
+# Ignore all scss files:
+src/scss/**/*.scss

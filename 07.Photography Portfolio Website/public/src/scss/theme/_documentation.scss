@@ -1,0 +1,94 @@
+/*-----------------------------------------------
+|   Documentation link and Prism
+-----------------------------------------------*/
+:not(pre) > code[class*='language-'], pre[class*='language-'] {
+  background-color: $light;
+  border: $border-width solid $gray-300;
+  border-radius: $border-radius;
+  font-size: 87.5%;
+}
+
+code[class*='language-'], pre[class*='language-'] { font-family: $font-family-monospace; }
+// .contains-anchor{
+//   a{
+//     opacity: 0;
+//     transition-property: opacity;
+//   }
+//   @include hover-focus{
+//     a{
+//       opacity: 1;
+//       text-decoration: none;
+//     }
+//   }
+// }
+
+.components-nav{
+  font-family: $font-family-sans-serif;
+  font-size: 0.85rem;
+}
+
+/*-----------------------------------------------
+|   Component examples
+-----------------------------------------------*/
+/*-----------------------------------------------
+|   Borders
+-----------------------------------------------*/
+.component-example{
+  font-family: $font-family-sans-serif;
+  [class^='border']{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 8rem;
+    margin: .75rem;
+    background-color: $gray-100;
+  }
+}
+
+/*-----------------------------------------------
+|   Component examples
+-----------------------------------------------*/
+/*-----------------------------------------------
+|   Borders
+-----------------------------------------------*/
+.component-example{
+  font-family: $font-family-sans-serif;
+  [class^='border']{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 8rem;
+    height: 8rem;
+    margin: .75rem;
+    background-color: $gray-100;
+  }
+}
+
+
+/*-----------------------------------------------
+|   Utilities
+-----------------------------------------------*/
+.border-component{
+  [class^=border],
+  [class^="rounded-"]{
+    display: inline-block;
+    width: 8rem;
+    height: 8rem;
+    margin: .25rem;
+  }
+
+  [class^=border] {
+    background-color: var(--#{$variable-prefix}100);
+  }
+
+  [class^="rounded-"] {
+    background-color: var(--#{$variable-prefix}100);
+  }
+}
+
+#loaders{
+  [class^="spinner"]{
+    margin-right: 0.5rem;
+  }
+}

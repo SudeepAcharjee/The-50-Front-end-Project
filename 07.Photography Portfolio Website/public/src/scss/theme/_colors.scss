@@ -1,0 +1,156 @@
+//*-----------------------------------------------
+//|   Color System
+//-----------------------------------------------*/
+
+$white: #fff !default;
+$gray-100: #E5E5E5 !default;
+$gray-200: #C4C4C4 !default;
+$gray-300: #8E8E8E !default;
+$gray-400: #5C5C5C !default;
+$gray-500: #76979E !default;
+$gray-600: #627E84 !default;
+$gray-700: #5B7075 !default;
+$gray-800: #536468 !default;
+$gray-900: #445356 !default;
+$gray-1000: #384345 !default;
+$gray-1100: #313839 !default;
+$black: #000 !default;
+$footer-black: #1B1B1B !default;
+
+
+$grays: () !default;
+$grays: map-merge(
+  (
+    'footer-black': $footer-black,
+    'black': $black,
+    '100': $gray-100,
+    '200': $gray-200,
+    '300': $gray-300,
+    '400': $gray-400,
+    '500': $gray-500,
+    '600': $gray-600,
+    '700': $gray-700,
+    '800': $gray-800,
+    '900': $gray-900,
+    '1000': $gray-1000,
+    '1100': $gray-1100,
+    'white': $white,
+  ),
+  $grays
+);
+$body-bg: $gray-200 !default;
+
+//*-----------------------------------------------
+//|   Solid Colors
+//-----------------------------------------------*/
+$blue: #186BE8 !default;
+$indigo: #1C16AF !default;
+$purple: #6f42c1 !default;
+$pink: #D032D0 !default;
+$red: #D65025 !default;
+$orange: #F59300 !default;
+$yellow: #D7AE20 !default;
+$green: #3DBB59 !default;
+$teal: #20c997 !default;
+$cyan: #5EDCD4 !default;
+
+//*-----------------------------------------------
+//|   Theme Colors
+//-----------------------------------------------*/
+$primary: $cyan   !default;
+$secondary: $blue !default;
+$success: $green !default;
+$info: $indigo !default;
+$warning: $orange !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-1100 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'danger': $danger,
+    'light': $light,
+    'dark': $dark,
+  ),
+  $theme-colors
+);
+
+$theme-colors-soft: () !default;
+$theme-colors-soft: map-merge(
+  (
+    'primary': tint-color($primary, 88%) ,
+    'secondary': tint-color($secondary, 88%),
+    'success': tint-color($success, 88%),
+    'info': tint-color($info, 88%),
+    'warning': tint-color($warning, 88%),
+    'danger': tint-color($danger, 88%),
+    'light': tint-color($light, 88%),
+    'dark': tint-color($dark, 88%),
+  ),
+  $theme-colors-soft
+);
+
+
+$dark-grays: (
+  'black': $white,
+  '100': $gray-1100,
+  '200': $gray-1000,
+  '300': $gray-900,
+  '400': $gray-800,
+  '500': $gray-700,
+  '600': $gray-600,
+  '700': $gray-500,
+  '800': $gray-400,
+  '900': $gray-300,
+  '1000': $gray-200,
+  '1100': $gray-100,
+  'white': $black,
+);
+
+// $dark-grays: (
+//   'black': $white,
+//   '100': #0A1727,
+//   '200': #142130,
+//   '300': #25303F,
+//   '400': #3C4754,
+//   '500': #5B646F,
+//   '600': #828992,
+//   '700': #A9AEB6,
+//   '800': #CACED3,
+//   '900': #E3E5EA,
+//   '1000': #F3F4F7,
+//   '1100': #F9FAFD,
+//   'white': $black,
+// );
+
+$theme-dark-colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'success': $success,
+  'info': $info,
+  'warning': $warning,
+  'danger': $danger,
+  'light': rgba(map-get($dark-grays, '200'), 0.25), //TODO
+  'dark': $light,
+);
+
+$theme-dark-colors-soft: () !default;
+$theme-dark-colors-soft: map-merge(
+  (
+    'primary': shift-color($primary, 70%),
+    'secondary': shift-color($secondary, 70%),
+    'success': shift-color($success, 70%),
+    'info': shift-color($info, 70%),
+    'warning': shift-color($warning, 70%),
+    'danger': shift-color($danger, 70%),
+    'light': shift-color($light, 70%),
+    'dark': shift-color($dark, 70%),
+  ),
+  $theme-dark-colors-soft
+);

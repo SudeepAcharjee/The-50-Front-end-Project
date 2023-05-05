@@ -1,0 +1,15 @@
+@import "../../node_modules/bootstrap/scss/_functions";
+@import "theme/functions";
+
+@import "../../node_modules/bootstrap/scss/mixins";
+@import "theme/mixins";
+
+@import "user-variables";
+@import "theme/variables";
+@import "../../node_modules/bootstrap/scss/variables";
+
+// 
+// 
+// user.scss
+//
+// Place your own theme CSS or SCSS rules below this line, these rules will override any Bootstrap and theme variables.

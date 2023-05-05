@@ -1,0 +1,342 @@
+/* -------------------------------------------------------------------------- */
+/*                                  Utilities                                 */
+/* -------------------------------------------------------------------------- */
+
+$grays-with-brand-color: map-merge($brand-colors, $grays) !default;
+$theme-all-colors: map_merge($grays-with-brand-color, $theme-colors) !default;
+
+$utilities: () !default;
+$utilities: map_merge(
+  (
+    "opacity": (
+      property: opacity,
+      responsive: true,
+      values: (
+        0: 0,
+        25: 0.25,
+        50: 0.5,
+        75: 0.75,
+        85: 0.85,
+        100: 1,
+      ),
+    ),
+    "text": (
+      property: color,
+      class: text,
+      values: map_merge($brand-colors, $grays),
+    ),
+    "font-weight": (
+      property: font-weight,
+      class: fw,
+      values: (
+        thin: $font-weight-thin,
+        lighter: $font-weight-lighter,
+        light: $font-weight-light,
+        normal: $font-weight-normal,
+        medium: $font-weight-medium,
+        semi-bold: $font-weight-semi-bold,
+        bold: $font-weight-bold,
+        bolder: $font-weight-bolder,
+        'black': $font-weight-black,
+      ),
+    ),
+    "font-size": (
+      property: font-size,
+      class: fs,
+      responsive: true,
+      values: $font-sizes,
+    ),
+    "position": (
+      property: position,
+      responsive: true,
+      values: (
+        static,
+        absolute,
+        relative,
+        fixed,
+        sticky,
+      ),
+    ),
+    "height": (
+      property: height,
+      class: h,
+      responsive: true,
+      values: $sizes,
+    ),
+    "width": (
+      property: width,
+      responsive: true,
+      class: w,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto
+      )
+    ),
+    "min-viewport-height": (
+      property: min-height,
+      class: min-vh,
+      responsive: true,
+      values: $viewport-heights,
+    ),
+    "viewport-height": (
+      property: height,
+      class: vh,
+      responsive: true,
+      values: $viewport-heights,
+    ),
+    "max-viewport-height": (
+      property: max-height,
+      class: max-vh,
+      responsive: true,
+      values: $viewport-heights,
+    ),
+    "viewport-width": (
+      property: width,
+      class: vw,
+      responsive: true,
+      values: $viewport-widths,
+    ),
+    "border": (
+      property: border,
+      responsive: true,
+      values: (
+        null: $border-width solid $border-color,
+        0: 0,
+      ),
+    ),
+    "border-top": (
+      property: border-top,
+      responsive: true,
+      class: border,
+      values: (
+        top: $border-width solid $border-color,
+        top-0: 0,
+      ),
+    ),
+    "border-end": (
+      property: border-right,
+      responsive: true,
+      class: border,
+      values: (
+        end: $border-width solid $border-color,
+        end-0: 0,
+      ),
+    ),
+    "border-start": (
+      property: border-left,
+      responsive: true,
+      class: border,
+      values: (
+        start: $border-width solid $border-color,
+        start-0: 0,
+      ),
+    ),
+    "border-bottom": (
+      property: border-bottom,
+      responsive: true,
+      class: border,
+      values: (
+        bottom: $border-width solid $border-color,
+        bottom-0: 0,
+      ),
+    ),
+    "border-x": (
+      property: border-left border-right,
+      responsive: true,
+      class: border,
+      values: (
+        x: $border-width solid $border-color,
+        x-0: 0,
+      ),
+    ),
+    "border-y": (
+      property: border-top border-bottom,
+      responsive: true,
+      class: border,
+      values: (
+        y: $border-width solid $border-color,
+        y-0: 0,
+      ),
+    ),
+    "border-dashed": (
+      responsive: true,
+      property: border,
+      class: border,
+      values: (
+        dashed: $border-width dashed $border-color,
+      ),
+    ),
+    "border-dashed-top": (
+      responsive: true,
+      property: border-top,
+      class: border,
+      values: (
+        dashed-top: $border-width dashed $border-color,
+      ),
+    ),
+    "border-dashed-end": (
+      responsive: true,
+      property: border-right,
+      class: border,
+      values: (
+        dashed-end: $border-width dashed $border-color,
+      ),
+    ),
+    "border-dashed-start": (
+      responsive: true,
+      property: border-left,
+      class: border,
+      values: (
+        dashed-start: $border-width dashed $border-color,
+      ),
+    ),
+    "border-dashed-bottom": (
+      responsive: true,
+      property: border-bottom,
+      class: border,
+      values: (
+        dashed-bottom: $border-width dashed $border-color,
+      ),
+    ),
+    "border-dashed-x": (
+      responsive: true,
+      property: border-left border-right,
+      class: border,
+      values: (
+        dashed-x: $border-width dashed $border-color,
+      ),
+    ),
+    "border-dashed-y": (
+      responsive: true,
+      property: border-top border-bottom,
+      class: border,
+      values: (
+        dashed-y: $border-width dashed $border-color,
+      ),
+    ),
+    "border-color": (
+      responsive: true,
+      property: border-color,
+      class: border,
+      values: $theme-all-colors,
+    ),
+    "rounded": (
+      property: border-radius,
+      class: rounded,
+      values: (
+        null: $border-radius,
+        0: 0,
+        1: $border-radius-sm,
+        2: $border-radius,
+        3: $border-radius-lg,
+        4: $border-radius-xl,
+        circle: 50%,
+        pill: $border-radius-pill
+      )
+    ),
+    "rounded-top": (
+      responsive: true,
+      property: border-top-left-radius border-top-right-radius,
+      class: rounded,
+      values: (
+        top: $border-radius,
+        top-lg: $border-radius-lg,
+        top-0: 0,
+      ),
+    ),
+    "rounded-end": (
+      responsive: true,
+      property: border-top-right-radius border-bottom-right-radius,
+      class: rounded,
+      values: (
+        end: $border-radius,
+        end-lg: $border-radius-lg,
+        end-0: 0,
+      ),
+    ),
+    "rounded-bottom": (
+      responsive: true,
+      property: border-bottom-right-radius border-bottom-left-radius,
+      class: rounded,
+      values: (
+        bottom: $border-radius,
+        bottom-lg: $border-radius-lg,
+        bottom-0: 0,
+      ),
+    ),
+    "rounded-start": (
+      responsive: true,
+      property: border-bottom-left-radius border-top-left-radius,
+      class: rounded,
+      values: (
+        start: $border-radius,
+        start-lg: $border-radius-lg,
+        start-0: 0,
+      ),
+    ),
+    "rounded-0": (
+      responsive: true,
+      property: border-radius,
+      class: rounded,
+      values: (
+        0: 0,
+      ),
+    ),
+    "background-color": (
+      property: background-color,
+      class: bg,
+      values:
+        map-merge(
+          $theme-all-colors,
+          (
+            "body": 'body',
+            "white": $white,
+            "transparent": transparent,
+          )
+        ),
+    ),
+    "background-soft-color": (
+      property: background-color,
+      class: bg-soft,
+      values: $theme-colors-soft
+    ),
+    "translate-middle": (
+      property: transform,
+      class: translate,
+      responsive: true,
+      values: (
+        middle: (translateX(-50%) translateY(-50%)),
+        middle-x: translateX(-50%),
+        middle-y: translateY(-50%),
+      )
+    ),
+
+    "max-width": (
+      property: max-width,
+      class: mw,
+
+      values: map-merge((100: 100%),$grid-breakpoints)
+    ),
+    
+    "z-Index": (
+      property: z-index,
+      class: z-index,
+      values: (
+      -1:-1,
+       0:0,
+       1:1,
+       2:2,
+       3:3,
+      )
+    ),
+    "overflow": (
+      property: overflow,
+      responsive: true,
+      values: auto hidden visible scroll,
+    ),
+  ),
+  $utilities
+);

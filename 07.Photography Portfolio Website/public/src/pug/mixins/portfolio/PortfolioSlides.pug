@@ -1,0 +1,40 @@
+mixin Slide(config)
+  .swiper-slide
+    .row.align-items-center
+      .col-xl-7
+        .position-relative 
+          .position-absolute.start-0.bottom-0.ms-3
+            h3.text-white #{config.title}
+            p.text-300 #{config.subtitle}
+          img.portfolio-img(src=`${CWD}assets/img/portfolio/${config.image}` alt="").img-fluid
+      .col-xl-4.mt-4
+        p.fs-0=config.description
+
+mixin PortfolioSlides 
+  +Section('container-fluid px-0').py-3
+    .position-absolute.w-100.border-dashed-bottom.opacity-25.top-5.z-index-1
+    .container.px-md-5
+      .row.g-0
+        .col-lg-12.pb-6.px-0.mb-lg-0
+          .swiper-container.swiper-theme(data-swiper!={
+            slidesPerView: 1,
+            breakpoints: {
+              576: {
+                slidesPerView: 1.2,
+              },
+            },
+            spaceBetween: 30,
+            grabCursor: true,
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            loop: true,
+            loopedSlides: 3,
+            slideToClickedSlide: true,
+          })
+            .swiper-wrapper
+              +Slide({title: "Mogadisu Somalia", subtitle: "Shooting and Advertisement Campaign", description: "I a genre of Japanese art that became popular in the 17th century through to the 19th century. The word roughly translates as “pictures of the floating world” and artists belonging to the movement produced woodblock prints and paintings of scenes from history and folktales, sumo wrestlers, landscapes of flora and fauna, and a touch of erotica.", image: 'img01.png'})
+              +Slide({title: "Mogadisu Somalia", subtitle: "Shooting and Advertisement Campaign", description: "I a genre of Japanese art that became popular in the 17th century through to the 19th century. The word roughly translates as “pictures of the floating world” and artists belonging to the movement produced woodblock prints and paintings of scenes from history and folktales, sumo wrestlers, landscapes of flora and fauna, and a touch of erotica.", image: 'img02.png'})
+              +Slide({title: "Mogadisu Somalia", subtitle: "Shooting and Advertisement Campaign", description: "I a genre of Japanese art that became popular in the 17th century through to the 19th century. The word roughly translates as “pictures of the floating world” and artists belonging to the movement produced woodblock prints and paintings of scenes from history and folktales, sumo wrestlers, landscapes of flora and fauna, and a touch of erotica.", image: 'img03.png'})  
+          .swiper-theme.swiper-pagination.d-flex.mt-4

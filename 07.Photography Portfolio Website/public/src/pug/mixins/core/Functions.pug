@@ -1,0 +1,29 @@
+mixin escape
+  - var oldBuf = pug_html;
+  - pug_html = '';
+  block
+  - pug_html = oldBuf + pug.escape(jsPretty(pug_html, {ocd: true}));
+  
+mixin cleanText(str)
+  | #{((str.charAt(0).toUpperCase() + str.slice(1)).replace(/-/g, ' ')).replace('_and_', '&')}
+
+mixin getFirstLetter(str)
+  | #{str.match(/\b\w/g).join('')}
+
+mixin hash(title)
+  a(href=`#${title}`)
+    h2=title
+
+mixin NavLinkTitle(str)
+  | #{(str.charAt(0).toUpperCase() + str.slice(1)).replace(/-/g, ' ')}
+
+mixin FlatArray()
+  - var z = ''
+
+mixin componentCode
+  pre.language-html&attributes(attributes)
+    code
+      +escape
+        block
+        
+

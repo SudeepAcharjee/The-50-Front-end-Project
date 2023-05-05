@@ -1,0 +1,19 @@
+@each $color, $value in $theme-colors {
+  .link-#{$color}{
+    color: var(--#{$variable-prefix}#{$color});
+    &:hover,
+    &:focus{
+      color: var(--#{$variable-prefix}colored-link-#{$color}-hover-color)
+    }
+  }
+}
+
+@each $color, $value in $grays {
+  .link-#{$color} {
+    color: var(--#{$variable-prefix}#{$color}) !important;
+    &:hover,
+    &:focus {
+      color: var(--#{$variable-prefix}colored-link-#{$color}-hover-color) !important;
+    }
+  }
+}

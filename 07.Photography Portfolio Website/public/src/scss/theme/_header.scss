@@ -1,0 +1,7 @@
+.hero-header-form{
+    margin-top: 3rem;
+    border: 1px solid rgba(94, 220, 212, 0.39);
+    @include media-breakpoint-up(sm) {
+        margin-top: 10rem;
+    }
+}

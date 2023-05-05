@@ -1,0 +1,32 @@
+.img-shape {
+	position: relative;
+	display: inline-block;
+
+	@include media-breakpoint-up(xl) {
+		&::before {
+			position: absolute;
+			content: '';
+			top: -1.5rem;
+			left: -1.5rem;
+			height: 10.125rem;
+			width: 11rem;
+			border-radius: 3.125rem;
+			z-index: -1 !important;
+			opacity: .3;
+			background-image: linear-gradient(200deg, rgba(24, 107, 232, 1),rgba(24, 107, 232, 1));
+		}
+		&::after {
+			position: absolute;
+			content: '';
+			height: 10.125rem;
+			width: 11rem;
+			border-radius: 3.125rem;
+			z-index: -1 !important;
+			top: 15.3rem;
+			left: 25rem;
+			border: 1px solid #186BE8;
+			opacity: .5;
+			background: transparent;
+		}
+	}
+} 

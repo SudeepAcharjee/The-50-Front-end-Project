@@ -1,0 +1,26 @@
+.widget-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	
+}
+
+.widget-list-link {
+	display: block;
+	transition: color .25s ease-in-out;
+	color: $gray-400;
+	font-size: .875rem;
+	font-weight: normal;
+	&:hover, &:focus{
+		text-decoration: none;
+		color: $gray-200;
+	}
+}
+
+.social-icons {
+	color: $gray-300;
+	&:hover{
+		text-decoration: none;
+		color: $white;
+	}
+}

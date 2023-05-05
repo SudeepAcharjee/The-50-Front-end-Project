@@ -1,0 +1,80 @@
+append variables 
+  -
+    var routes = [
+      {
+        href: `${CWD}index.html`,
+        text: 'Home'
+      },
+      {
+        href: `${CWD}portfolio.html`,
+        text: 'Portfolio'
+      },
+      {
+        href: `${CWD}gallery.html`,
+        text: 'Gallery'
+      },
+      {
+        href: `${CWD}exhibitions.html`,
+        text: 'Exhibitions'
+      },
+      {
+        href: `${CWD}about.html`,
+        text: 'About'
+      },
+      {
+        href: `${CWD}blog.html`,
+        text: 'Blog'
+      }
+    ]
+
+mixin Navbar({pageTitle, pageSubtitle})
+  nav.navbar.navbar-light.py-3.px-0.overflow-hidden
+    .container.px-md-5
+      .row.w-100.g-0.justify-content-between
+        .col-8
+          .d-inline-block
+            a.navbar-brand.pt-0.fs-3.text-black.d-flex.align-items-center(href=`${CWD}index.html`)
+              img(src=`${CWD}assets/img/icons/logo-icon.png` alt="").img-fluid
+              span.fw-bolder.ms-2 Foto
+              span.fw-thin gency
+
+          if pageTitle != 'Home'
+            .mt-4.d-none.d-lg-block
+              h1.text-uppercase.fs-lg-7.fs-5.fw-bolder.text-300.lh-1.position-relative.z-index-0=pageTitle
+              h1.d-none.d-md-block.fw-bolder.text-outlined.fs-7.text-white.lh-1.mt-n4.position-relative.z-index--1=pageSubtitle
+
+
+        .col-4.d-lg-none.text-end.pe-0
+          button.btn.p-0.shadow-none.text-black.fs-2.d-inline-block(data-bs-toggle='offcanvas' data-bs-target='#navbarOffcanvas' aria-controls='navbarOffcanvas' aria-expanded='false' aria-label='Toggle offcanvas navigation')
+            span.menu-bar
+        +MenuOffcanvas(pageTitle)
+
+        .col-4
+          .d-none.d-lg-flex.justify-content-end.position-relative.z-index-1
+            .position-absolute.absolute-centered.z-index--1
+              h1.ms-2.fw-bolder.text-outlined.text-uppercase.text-white.pe-none.display-1=pageTitle
+
+            .d-flex.gap-3.align-items-start
+              a(href="blog.html#contact").mb-0.ms-auto.text-warning.fs-0.fw-bold.text-uppercase Contact Now
+
+              ul.navbar-nav.navbar-fotogency.ms-auto.text-end
+                each route in routes
+                  li.nav-item.px-2.position-relative
+                    a.nav-link.pt-0(aria-current='page', href=route.href class= pageTitle === route.text ? 'active' : '' )=route.text
+      if pageTitle != 'Home'
+        .row.g-0.mt-4.d-lg-none
+          h1.text-uppercase.ps-0.fs-lg-7.fs-5.fw-bolder.text-300.lh-1.position-relative.z-index-0=pageTitle
+          h1.fw-bolder.text-outlined.ps-0.fs-lg-7.fs-sm-6.fs-5.text-white.lh-1.mt-sm-n4.mt-n3.position-relative.z-index--1=pageSubtitle
+
+mixin MenuOffcanvas(pageTitle)
+  .offcanvas.offcanvas-end.px-0(id='navbarOffcanvas', aria-labelledby='navbarOffcanvasTitle', aria-hidden='true')
+    .offcanvas-header.justify-content-end
+      h5.visually-hidden.offcanvas-title#navbarOffcanvasTitle Menu
+      button.btn.p-0.shadow-none.text-black.fs-2.d-inline.text-end(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+        span.menu-close-bar
+    .offcanvas-body.px-0
+      .d-lg-flex.flex-center-start.gap-3.overflow-hidden         
+        ul.navbar-nav.ms-auto.fs-4.ps-6
+          each route in routes
+            li.nav-item
+              a.nav-link.d-inline-block.nav-text-outlined.lh-1.text-white.fs-5(aria-current='page', href=route.href class=pageTitle === route.text ? 'active' : '' )=route.text

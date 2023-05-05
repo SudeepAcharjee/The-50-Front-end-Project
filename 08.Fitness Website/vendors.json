@@ -1,0 +1,70 @@
+{
+  "bootstrap": {
+    "src": ["dist/js/bootstrap.min.js", "dist/js/bootstrap.min.js.map"],
+    "dest": "bootstrap"
+  },
+  "glightbox": {
+    "src": ["dist/js/glightbox.min.js", "dist/css/glightbox.min.css"],
+    "dest": "glightbox"
+  },
+  "prismjs": {
+    "src": ["prism.js", "themes/prism.css"],
+    "dest": "prism"
+  },
+  "is_js": {
+    "src": "is.min.js",
+    "dest": "is"
+  },
+  "anchor-js": {
+    "src": "anchor.min.js",
+    "dest": "anchorjs"
+  },
+  "@fortawesome/fontawesome-free": {
+    "src": "js/all.min.js",
+    "dest": "fontawesome"
+  },
+
+  "lodash": {
+    "src": "lodash.min.js",
+    "dest": "lodash"
+  },
+
+  "countup.js": {
+    "src": "dist/countUp.umd.js",
+    "dest": "countup"
+  },
+
+  "@popperjs/core": {
+    "src": ["dist/umd/popper.min.js", "dist/umd/popper.min.js.map"],
+    "dest": "popper"
+  },
+
+  "swiper": {
+    "src": [
+      "swiper-bundle.min.js",
+      "swiper-bundle.min.js.map",
+      "swiper-bundle.min.css"
+    ],
+    "dest": "swiper"
+  },
+
+  "rellax": {
+    "src": ["rellax.min.js"],
+    "dest": "rellax"
+  },
+
+  "isotope-layout": {
+    "src": ["dist/isotope.pkgd.min.js"],
+    "dest": "isotope-layout"
+  },
+
+  "isotope-packery": {
+    "src": ["packery-mode.pkgd.min.js"],
+    "dest": "isotope-packery"
+  },
+
+  "imagesloaded": {
+    "src": ["imagesloaded.pkgd.js"],
+    "dest": "imagesloaded"
+  }
+}

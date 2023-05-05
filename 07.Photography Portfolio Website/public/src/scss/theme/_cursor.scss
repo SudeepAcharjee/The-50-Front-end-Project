@@ -1,0 +1,30 @@
+
+.cursor-outer {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 100%;
+  border: 1px solid $warning;
+  transition: all .15s ease-out;
+  background-color: rgba($warning, 0.0);
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  transform: translate(calc(-50% + 15px), -50%);
+  backdrop-filter: blur(1px);
+  
+  &.link-hover {
+      background-color: transparent;
+      width: 3.8rem;
+      height: 3.8rem;
+      backdrop-filter: none;
+      background-blend-mode: color-burn;
+    }
+  }
+  
+.safari {
+  .cursor-outer {
+    transition: width 0.15s ease-out, height 0.15s ease-out;
+  }
+}

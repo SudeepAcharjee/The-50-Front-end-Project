@@ -1,0 +1,101 @@
+/*-----------------------------------------------
+|   Card
+-----------------------------------------------*/
+.card-link {
+  font-size: map_get($font-sizes, "-1");
+  font-weight: $font-weight-semi-bold;
+}
+
+.card-body:last-child {
+  border-bottom-left-radius: $card-border-radius;
+  border-bottom-right-radius: $card-border-radius;
+}
+
+
+/*-----------------------------------------------
+|   Card spacer
+-----------------------------------------------*/
+.ps-card,
+.px-card,
+.p-card {
+  padding-left: $card-spacer-x !important;
+}
+.pe-card,
+.px-card,
+.p-card {
+  padding-right: $card-spacer-x !important;
+}
+.pt-card,
+.py-card,
+.p-card {
+  padding-top: $card-spacer-x !important;
+}
+.pb-card,
+.py-card,
+.p-card {
+  padding-bottom: $card-spacer-x !important;
+}
+.mt-card {
+  margin-top: $card-spacer-x !important;
+}
+.mr-card {
+  margin-right: $card-spacer-x !important;
+}
+
+.ms-ncard,
+.mx-ncard,
+.m-ncard {
+  margin-left: -$card-spacer-x !important;
+}
+.me-ncard,
+.mx-ncard,
+.m-ncard {
+  margin-right: -$card-spacer-x !important;
+}
+
+.card-img,
+.card-img-top {
+  @include border-top-radius(0);
+}
+
+.card-img,
+.card-img-bottom {
+  @include border-bottom-radius(0);
+}
+
+//- card hover overley
+.card-blog {
+	position: relative;
+	overflow: hidden;
+	box-sizing: border-box;
+	// height: 12.5rem;
+	margin-bottom: map_get($spacers,3);
+	border-radius: 1rem;
+	.card-img {
+		width: 100%;
+		height: 100%;
+		transition: all 0.8s;
+		object-fit: cover;
+	}
+	@include hover-focus{
+		.card-img{ transform: scale(1.1); }
+	}
+	.overlay-gradient{
+		background: none;
+		
+		@include hover-focus{
+			background: linear-gradient(225deg, rgba(6, 26, 85, 0) 0%, rgba(1, 19, 61, 0.9) 65.07%);
+		}
+	}
+}
+
+.card-bg {
+  background-color: rgba(4, 91, 193, .3);
+  -webkit-backdrop-filter: blur(0.625rem);
+  backdrop-filter: blur(0.625rem);
+}
+
+.card-soft-primary{
+  background: rgba(24, 107, 232, 0.08);
+  border: 1px solid rgba(24, 107, 232, 0.4);
+} 

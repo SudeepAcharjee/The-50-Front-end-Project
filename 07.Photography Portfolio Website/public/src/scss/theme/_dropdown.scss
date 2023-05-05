@@ -1,0 +1,40 @@
+/*-----------------------------------------------
+|   Dropdown
+-----------------------------------------------*/
+.dropdown-menu {
+  font-size: map_get($font-sizes, "-1");
+  border-radius: $border-radius-lg;
+}
+
+.dropdown-indicator {
+  position: relative;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 5px;
+    height: 0.4rem;
+    width: 0.4rem;
+    border-right: 1px solid $gray-700;
+    border-bottom: 1px solid $gray-700;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    transition: $transition-base;
+    transform-origin: center;
+    transition-property: transform, border-color;
+  }
+  &[aria-expanded="true"]:after {
+    transform: translateY(-50%) rotate(225deg);
+  }
+}
+
+.dropdown-caret-none {
+  &:after, &:before {
+    display: none !important;
+  }
+}
+
+.dropdown-md {
+  min-width: 16.625rem;
+}
+  

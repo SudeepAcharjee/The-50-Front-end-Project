@@ -8,7 +8,7 @@ This repository contains 50 frontend projects that were developed to help develo
 <a href="https://thrift-flip-store.netlify.app/">4.E-commerce Website</a><br>
 <a href="https://resutrantcode.netlify.app/">5.Resturant Website</a><br>
 <a href="https://hotel-landing-06.netlify.app/">6.Hotel Website</a><br>
-7.Photography Portfolio Website<br>
+<a href="https://photography-portfolio07.netlify.app/">7.Photography Portfolio Website</a><br>
 8.Fitness Website<br>
 <a href="https://generate-pass5.netlify.app/">9.Password Generator </a><br>
 10.QR code Generator<br>

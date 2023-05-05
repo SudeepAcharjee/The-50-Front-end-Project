@@ -1,0 +1,9 @@
+@mixin alert-variant($background, $border, $color) {
+  color: var(--#{$variable-prefix}alert-#{$color}-color);
+  @include gradient-bg(var(--#{$variable-prefix}alert-#{$color}-background));
+  border-color: var(--#{$variable-prefix}alert-#{$color}-border-color);;
+
+  .alert-link {
+      color: var(--#{$variable-prefix}alert-#{$color}-link-color);
+  }
+}

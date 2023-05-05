@@ -1,0 +1,45 @@
+extends Layout
+include ../mixins/navbars/Navbar
+include ../mixins/footers/Footer
+include ../mixins/Variables
+
+
+append variables
+  - var attrsBody = {  };
+  - var breakPoint = 'lg';
+  - 
+    var pageInfo = {
+      pageTitle: 'Home',
+      pageSubtitle: '',
+    }
+ 
+append title 
+  title= `${pageInfo.pageTitle === 'Home' ? 'Fotogency' : pageInfo.pageTitle} | ${pageInfo.pageSubtitle || 'Photography Agency Template'}`
+
+append headScripts
+
+block prepend styles
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap' rel='stylesheet')
+  link(href=`${CWD}vendors/prism/prism.css`, rel='stylesheet')
+  link(href=`${CWD}vendors/swiper/swiper-bundle.min.css`, rel='stylesheet')
+
+  
+
+prepend scripts
+  script(src=`${CWD}vendors/fontawesome/all.min.js`)
+  script(src=`${CWD}vendors/lodash/lodash.min.js`)
+  script(src=`https://polyfill.io/v3/polyfill.min.js?features=window.scroll`)
+  script(src=`${CWD}vendors/prism/prism.js`)
+  script(src=`${CWD}vendors/swiper/swiper-bundle.min.js`)
+  
+
+block mainContent
+  //- .cursor-inner 
+  .cursor-outer.d-none.d-md-block
+  +Navbar(pageInfo)
+  block content
+   
+block afterMainContent
+  +Footer(pageInfo)
+

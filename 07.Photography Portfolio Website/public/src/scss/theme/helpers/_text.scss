@@ -1,0 +1,53 @@
+
+/* -------------------------------------------------------------------------- */
+/*                                    Text                                    */
+/* -------------------------------------------------------------------------- */
+
+.text-smallcaps {
+  font-variant: small-caps;
+}
+.text-superscript {
+  vertical-align: super;
+}
+.text-word-break {
+  word-break: break-word;
+}
+
+
+/*-----------------------------------------------
+|   Font family
+-----------------------------------------------*/
+// .text-serif { font-family: $font-family-serif; }
+.font-sans-serif {
+  font-family: $font-family-sans-serif;
+}
+.font-base {
+  font-family: $font-family-base;
+}
+
+/*-----------------------------------------------
+|   Error Page
+-----------------------------------------------*/
+.fs-error {
+  font-size: 7rem;
+  @include media-breakpoint-up(sm) {
+    font-size: 10rem;
+  }
+}
+
+/*-----------------------------------------------
+|   Text alignment
+-----------------------------------------------*/
+.text-justify{
+  text-align: justify !important;
+}
+@include media-breakpoint-up(lg) {
+  .text-vertical{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    margin:0;
+  }
+}
+
+

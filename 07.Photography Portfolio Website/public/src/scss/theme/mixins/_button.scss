@@ -1,0 +1,56 @@
+/* -------------------------------------------------------------------------- */
+/*                                Falcon Button                               */
+/* -------------------------------------------------------------------------- */
+@mixin falcon-button-variant($color) {
+  color: var(--#{$variable-prefix}btn-falcon-#{$color}-color);
+  background-color: var(--#{$variable-prefix}btn-falcon-background);
+  // @if $enable-gradients {
+  //   background-image: var(--#{$variable-prefix}gradient);
+  // }
+  border-color: var(--#{$variable-prefix}btn-falcon-background);
+  box-shadow: var(--#{$variable-prefix}btn-falcon-box-shadow);
+
+  @include hover-focus {
+    color: var(--#{$variable-prefix}btn-falcon-#{$color}-hover-color);
+    background-color: var(--#{$variable-prefix}btn-falcon-background);
+    border-color: var(--#{$variable-prefix}btn-falcon-background);
+    &:not(.disabled):not(:disabled) {
+      color: var(--#{$variable-prefix}btn-falcon-#{$color}-hover-color);
+      box-shadow: var(--#{$variable-prefix}btn-falcon-hover-box-shadow);
+    }
+  }
+  &:active {
+    box-shadow: none !important;
+    color: var(--#{$variable-prefix}btn-falcon-#{$color}-active-color);
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    color: var(--#{$variable-prefix}btn-falcon-#{$color}-color);
+    background-color: var(--#{$variable-prefix}btn-falcon-#{$color}-active-background);
+    // Remove CSS gradients if they're enabled
+    // background-image: if($enable-gradients, none, null);
+    border-color: var(--#{$variable-prefix}btn-falcon-background);
+
+    // &:focus {
+    //   @if $enable-shadows {
+    //     @include box-shadow($btn-active-box-shadow, 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), .5));
+    //   } @else {
+    //     // Avoid using mixin so we can pass custom focus shadow properly
+    //     box-shadow: 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), .5);
+    //   }
+    // }
+  }
+
+  &:disabled,
+  &.disabled {
+    color: var(--#{$variable-prefix}btn-disabled-color);
+    background-color: var(--#{$variable-prefix}btn-falcon-background);
+    // Remove CSS gradients if they're enabled
+    background-image: if($enable-gradients, none, null);
+    box-shadow: var(--#{$variable-prefix}btn-falcon-box-shadow);
+  }
+}

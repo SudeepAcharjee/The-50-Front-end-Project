@@ -1,0 +1,55 @@
+mixin Blogs
+  -
+    var blogs = [
+      {
+        title: "Simply dummy text of the printing and typesetting.",
+        author: "Frederico giuspam",
+        excerpt: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some",
+        image: "img1.png",
+        readTime: "6min read",
+        tag: "color and light"
+      },
+      {
+        title: "Simply dummy text of the printing and typesetting.",
+        author: "Frederico giuspam",
+        excerpt: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some",
+        image: "img2.png",
+        readTime: "6min read",
+        tag: "color and light"
+      },
+      {
+        title: "Simply dummy text of the printing and typesetting.",
+        author: "Frederico giuspam",
+        excerpt: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some",
+        image: "img3.png",
+        readTime: "6min read",
+        tag: "color and light"
+      }
+    ]
+
+  +Section.py-2
+    .row.g-4
+      each blog in blogs
+        .col-lg-4.col-md-6.d-flex
+          .card.border-0.mb-3
+            img.card-img-top(src=`${CWD}assets/img/blogs/${blog.image}` alt="")
+            .d-flex.align-items-center.justify-content-between
+              .d-flex.align-items-center 
+                span.fa-solid.fa-circle-dot.text-warning
+                p.text-300.m-0.ps-1=blog.readTime
+              .bg-warning.p-2.text-center.opacity-50
+                p.text-white.mb-0=blog.tag
+            .mt-4
+              h5.mb-3=blog.title
+              p.text-200.m-0.mb-3 By - 
+                span.text-300.fw-bold=blog.author
+              p.mb-3=blog.excerpt
+              button.btn.btn-link.text-warning.p-0
+                span.fw-medium Read full article
+                img(src=`${CWD}assets/img/icons/long-arrow.png` alt="").ms-3
+    .row
+      .d-flex.align-items-center.justify-content-center.mt-3
+        button.btn.btn-link.d-inline-block.text-warning.p-0.fs-1
+          span.fw-bold See all
+
+              

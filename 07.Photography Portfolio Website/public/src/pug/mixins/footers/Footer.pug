@@ -1,0 +1,88 @@
+mixin Footer 
+  +PreFooter
+  +Section.bg-black.py-0
+    .row.g-0.justify-content-md-between.justify-content-evenly.py-4
+      .col-12.col-sm-8.col-md-6.col-lg-auto.text-center.text-md-start
+        p.fs--1.my-2.fw-light.text-100 All rights Reserved &copy; Your Company, #{new Date().getFullYear()}
+      .col-12.col-sm-8.col-md-6
+        p.fs--1.fw-light.my-2.text-center.text-md-end.text-100  Made with&nbsp;
+          svg.bi.bi-suit-heart-fill(xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='#F95C19' viewBox='0 0 16 16')
+            path(d='M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z')
+
+          |&nbsp;by&nbsp;
+          a(href='https://themewagon.com/' target='_blank').fw-bold.text-warning ThemeWagon
+
+mixin PreFooter
+  - 
+    var infos = [
+      {
+        text: '2109 WS 09 Oxford Rd #127 ParkVilla Hills, MI 48334',
+        icon: 'fas fa-map-marker-alt',
+        href: 'https://www.google.com/maps/place/2109+WS+09+Oxford+Rd+%23127+ParkVilla+Hills,+'
+      },
+      {
+        text: '+88 019 76456893',
+        icon: 'fas fa-phone',
+        href: 'tel:+8801976476893'
+      },
+      {
+        text: 'scrumbledegg@gmail.com',
+        icon: 'fas fa-envelope',
+        href: 'mailto:scrscrumbledegg@gmail.com'
+      }
+    ]
+
+  - 
+    var socials = [
+      {
+        text: 'Facebook',
+        icon: 'fab fa-facebook-f',
+        link: 'https://www.facebook.com/'
+      },
+      {
+        text: 'Flickr',
+        icon: 'fab fa-flickr',
+        link: 'https://www.flickr.com/photos/'
+      },
+      {
+        text: 'Twitter',
+        icon: 'fab fa-twitter',
+        link: 'https://twitter.com/'
+      },
+      {
+        text: 'Instagram',
+        icon: 'fab fa-instagram',
+        link: 'https://www.instagram.com/'
+      },
+      {
+        text: 'Youtube',
+        icon: 'fab fa-youtube',
+        link: 'https://www.youtube.com/'
+      }
+    ]
+  footer.bg-footer-black#footer
+    .container.py-7.px-md-5
+      .row.g-0
+        .col-md-6.mb-5.mb-md-0 
+          .mb-4.d-inline-block
+            a.navbar-brand.pt-0.fs-3.text-white.d-flex.align-items-center(href=`${CWD}index.html`)
+              img(src=`${CWD}assets/img/icons/dark-logo-icon.png` alt="" width="25" height="25" ).img-fluid
+              span.fw-bolder.ms-2 Foto
+              span.fw-thin gency
+          each info in infos
+            .col-12.col-md-10.text-300.mb-3
+              i(class=info.icon)
+              a(href=info.href).nav-link.text-300.d-inline=info.text
+
+        .col-md-6
+          h5.text-white.mb-2 SUBSCRIBE TO OUR NEWSLETTER
+          form
+            .form-floating.mb-5.position-relative.text-200
+              input.form-control.form-fotogency-header-control.text-200#email(type='email' placeholder='name@example.com' required)
+              label.text-300.mb-1(for='email') Email
+              .position-absolute.end-0.top-0
+                button(type="submit").btn.shadow-none.px-0
+                  img(src=`${CWD}assets/img/icons/long-arrow.png` alt="").ms-3
+          .d-flex.gap-2.flex-wrap.justify-content-between.align-items-center
+            each social in socials
+              a.social-icons(href=social.link target='_blank')=social.text

@@ -1,0 +1,69 @@
+// pow() - Raise number to the nth power
+//
+// @param {number} $base      The base number
+// @param {number} $exponents The exponent to which to raise $base
+@function pow($base, $exponents) {
+  $raised: 1;
+  @for $i from 1 through $exponents {
+    $raised: $raised * $base;
+  }
+  @return $raised;
+}
+@function toRem($px) {
+  @return ($px / 16);
+}
+
+@function mapReverse($map) {
+  $result: null;
+
+  @if type-of($map) == "map" {
+      $keys: map-keys($map);
+      $map-reversed: ();
+      
+      @for $i from length($keys) through 1 {
+          $map-reversed: map-merge(
+              $map-reversed,
+              (nth($keys, $i): map-get($map, nth($keys, $i)))
+          );
+      }
+
+      @if type-of($map-reversed) == "map" {
+          $result: $map-reversed;
+      } @else {
+          @warn 'There was an error reversing the order of "#{$map}"';
+      }
+  } @else {
+      @warn '"#{$map}" is not a valid map';
+  }
+
+  @return $result;
+}
+
+@mixin chrome-scrollbar($bg: $scrollbar-bg) {
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    visibility: hidden;
+    -webkit-appearance: none;
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    visibility: hidden;
+    border-radius: 3px;
+    background-color: $bg;
+  }
+
+  @include hover-focus {
+    &::-webkit-scrollbar, &::-webkit-scrollbar-thumb {
+      visibility: visible;
+    }
+  }
+}
+
+@mixin firefox-scrollbar($bg: $scrollbar-bg) {
+  overflow: auto !important;
+  scrollbar-color: $bg transparent;
+  scrollbar-width: thin;
+}

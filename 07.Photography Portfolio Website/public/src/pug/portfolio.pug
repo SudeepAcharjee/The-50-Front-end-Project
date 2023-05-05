@@ -1,0 +1,24 @@
+extends layouts/LayoutTheme
+include mixins/portfolio/PortfolioSlides
+
+
+append variables
+  - 
+    var pageInfo = {
+      pageTitle: 'Portfolio',
+      pageSubtitle: 'Selected Works',
+    }
+
+
+append styles  
+
+prepend scripts
+
+
+block content 
+  +PortfolioSlides 
+
+
+
+
+

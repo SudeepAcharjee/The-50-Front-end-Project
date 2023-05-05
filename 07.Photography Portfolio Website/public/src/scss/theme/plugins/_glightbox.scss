@@ -1,0 +1,32 @@
+/* -------------------------------------------------------------------------- */
+/*                                  Glightbox                                 */
+/* -------------------------------------------------------------------------- */
+
+.glightbox-open{
+  overflow: auto !important;
+}
+.gscrollbar-fixer{
+  margin-right: 0 !important;
+}
+[data-glightbox] {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+.glightbox-clean {
+  .gslide-description {
+    background: transparent !important;
+    .gdesc-inner {
+      text-align: center;
+    }
+    .gslide-title {
+      color: #fff !important;
+      margin-bottom: 0 !important;
+      text-align: center;
+      font-weight: bold !important;
+      font-size: 1.2rem !important;
+    }
+    .gslide-desc {
+      color: var(--#{$variable-prefix}300);
+    }
+  }
+}

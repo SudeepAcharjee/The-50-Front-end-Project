@@ -1,0 +1,26 @@
+/*-----------------------------------------------
+|   Navigation bar
+-----------------------------------------------*/
+.navbar-fotogency {
+  font-weight: $font-weight-normal;
+  font-size: $navbar-font-size;
+  letter-spacing: 0.01em;
+  transition: $transition-base;
+  .nav-link {
+    &.active {
+      color: #000 !important;
+      position: relative;
+      font-weight: $font-weight-bold;
+      &:before {
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 10000%;
+        top: 40%;
+        right: -10010%;
+        transform: translateY(-50%);
+        background: $warning;
+      }
+    }
+  }
+}

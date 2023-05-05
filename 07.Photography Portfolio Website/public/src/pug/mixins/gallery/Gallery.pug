@@ -1,0 +1,75 @@
+append variables
+  -  
+    var galleryImages = [
+      {
+        image: "1.png",
+        title: "To infinity and beyond",
+        description: "Iching biching chiching",
+        class: "col-lg-3 col-sm-6 col-12 shortfilms"
+      },
+      {
+        image: "2.png",
+        title: "To infinity and beyond",
+        description: "Iching biching chiching",
+        class: "col-lg-3 col-sm-6 col-12 shortfilms"
+      },
+      {
+        image: "3.png",
+        title: "To infinity and beyond",
+        description: "Iching biching chiching",
+        class: "col-lg-6 col-12 shortfilms"
+      },
+      {
+        image: "4.png",
+        title: "To infinity and beyond",
+        description: "Iching biching chiching",
+        class: "col-lg-6 col-12 professional"
+      },
+      {
+        image: "5.png",
+        title: "To infinity and beyond",
+        description: "Iching biching chiching",
+        class: "col-lg-3 col-sm-6 col-12 professional"
+      },
+      {
+        image: "6.png",
+        title: "To infinity and beyond",
+        description: "Iching biching chiching",
+        class: "col-lg-3 col-sm-6 col-12 professional"
+      },
+      {
+        image: "7.png",
+        title: "To infinity and beyond",
+        description: "Iching biching chiching",
+        class: "col-lg-3 col-sm-6 col-12 commercial"
+      },
+      {
+        image: "8.png",
+        title: "To infinity and beyond",
+        description: "Iching biching chiching",
+        class: "col-lg-3 col-sm-6 col-12 commercial"
+      },
+      {
+        image: "9.png",
+        title: "To infinity and beyond",
+        description: "Iching biching chiching",
+        class: "col-lg-6 col-12 commercial"
+      }
+    ]
+mixin Gallery 
+  section.pt-3.pb-9.position-relative
+    .container.px-md-5
+      .position-md-absolute.start-0.ms-2.mt-3.mb-4
+        ul.nav.gallery-tab.d-flex.gap-3(data-filter-nav)
+          li.nav-item
+            a.nav-link.p-0.py-md-2.isotope-nav.active(href ='#!' data-filter='*') All
+          li.nav-item
+            a.nav-link.p-0.py-md-2.isotope-nav(href ='#!' data-filter='.shortfilms') Short films
+          li.nav-item
+            a.nav-link.p-0.py-md-2.isotope-nav(href ='#!' data-filter='.professional') Professional
+          li.nav-item
+            a.nav-link.p-0.py-md-2.isotope-nav(href ='#!' data-filter='.commercial') Commercial
+      .row.g-3(data-isotope!={layoutMode: 'packery'})
+        each image, i in galleryImages
+          div(class=image.class).gallery-item.isotope-item
+            img(src=`${CWD}assets/img/gallery/${image.image}` alt="" data-glightbox=`title: ${image.title}; description: ${image.description}`).img-fluid.w-100

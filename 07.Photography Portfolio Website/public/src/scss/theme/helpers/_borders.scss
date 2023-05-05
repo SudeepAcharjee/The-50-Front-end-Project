@@ -1,0 +1,14 @@
+
+/* -------------------------------------------------------------------------- */
+/*                                   Borders                                  */
+/* -------------------------------------------------------------------------- */
+
+// Safari clipping mask
+.overflow-hidden[class*='rounded']{
+  mask-image: radial-gradient($white, $black);
+}
+
+.border-top-2{ border-top-width: 2px !important; }
+.border-end-2{ border-right-width: 2px !important; }
+.border-bottom-2{ border-bottom-width: 2px !important; }
+.border-start-2{ border-left-width: 2px !important; }

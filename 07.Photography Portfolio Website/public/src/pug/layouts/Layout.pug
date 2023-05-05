@@ -1,0 +1,96 @@
+//- ===============================================
+//-     Global  Variables
+//- ===============================================
+block variables
+  - var CWD = '';
+  - var attrsHtml = { lang: `${ dir === 'rtl' ? 'ar' : 'en-US'}`, dir: dir || 'ltr' };
+  - var attrsBody = {};
+  - var attrsMain = {};
+  - var attrsLayout = {};
+
+
+//- ===============================================
+//-     Basic Modules
+//- ===============================================
+include ../mixins/core/Functions
+include ../mixins/core/Section
+include ../mixins/core/ThemeStyle
+
+
+doctype html
+html()&attributes(attrsHtml)
+  head
+
+    block meta
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible' content='IE=edge')
+      meta(name='viewport' content='width=device-width, initial-scale=1')
+
+
+    = '\n\n'
+    // ===============================================
+    //    Document Title
+    // ===============================================
+    block title
+
+
+    = '\n\n'
+    // ===============================================
+    //    Favicons
+    // ===============================================
+    block favicon
+      link(rel="apple-touch-icon" sizes="180x180", href=`${CWD}assets/img/favicons/apple-touch-icon.png`)
+      link(rel="icon" type="image/png" sizes="32x32", href=`${CWD}assets/img/favicons/favicon-32x32.png`)
+      link(rel="icon" type="image/png" sizes="16x16", href=`${CWD}assets/img/favicons/favicon-16x16.png`)
+      link(rel="shortcut icon" type="image/x-icon", href=`${CWD}assets/img/favicons/favicon.ico`)
+      link(rel="manifest", href=`${CWD}assets/img/favicons/manifest.json`)
+      meta(name='msapplication-TileImage', content=`${CWD}assets/img/favicons/mstile-150x150.png`)
+      meta(name="theme-color" content="#ffffff")
+
+    block headScripts
+
+    = '\n\n'
+    // ===============================================
+    //    Stylesheets
+    // ===============================================
+
+    block styles
+      +ThemeStyle
+
+
+  = '\n\n'
+  body()&attributes(attrsBody)
+
+    block beforeMainContent
+
+    = '\n'
+    // ===============================================
+    //    Main Content
+    // ===============================================
+    main()&attributes(attrsMain)
+      //- p=JSON.stringify(pageTree,null,2)
+      block mainContent
+    // ===============================================
+    //    End of Main Content
+    // ===============================================
+    = '\n\n'
+    
+
+    block afterMainContent
+
+    = '\n\n'
+    // ===============================================
+    //    JavaScripts
+    // ===============================================
+    
+    script(src=`${CWD}vendors/popper/popper.min.js`)
+    script(src=`${CWD}vendors/bootstrap/bootstrap.min.js`)
+    script(src=`${CWD}vendors/anchorjs/anchor.min.js`)
+    script(src=`${CWD}vendors/is/is.min.js`)
+    
+    block scripts
+      script(src=`${CWD}assets/js/theme.js`)
+
+    = '\n'
+
+    block footerStyles

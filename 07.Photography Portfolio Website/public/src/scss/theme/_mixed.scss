@@ -1,0 +1,286 @@
+/*-----------------------------------------------
+|   Miscellaneous
+-----------------------------------------------*/
+
+.hover-text-decoration-none{
+  @include hover-focus{
+    text-decoration: none;
+  }
+}
+.resize-none{ resize: none; }
+
+.collapsed .collapse-icon {
+  transition: $transition-base;
+  transform: rotate(0deg);
+}
+.collapse-icon {
+  transition: $transition-base;
+  transform: rotate(90deg);
+}
+
+[data-dismiss="dropdown"],
+[data-bs-offset-top],
+[data-bs-toggle="collapse"],
+[data-bs-toggle="tooltip"],
+[data-bs-toggle="popover"]{
+  *{
+    pointer-events: none;
+  }
+}
+
+/*-----------------------------------------------
+|   Outline
+-----------------------------------------------*/
+
+.outline-none {
+  outline: none;
+  box-shadow: none;
+  @include hover-focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+/*-----------------------------------------------
+|   Vertical Line (used in kanban header)
+-----------------------------------------------*/
+.vertical-line {
+  &:after {
+    position: absolute;
+    content: "";
+    height: 75%;
+    width: 1px;
+    background: var(--#{$variable-prefix}300);
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &.vertical-line-400 {
+    &:after {
+      background-color: var(--#{$variable-prefix}400);
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Transition                                 */
+/* -------------------------------------------------------------------------- */
+
+.transition-base {
+  transition: $transition-base;
+}
+.transition-none{
+  transition: none;
+}
+
+.fsp-75{
+  font-size: 75%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    Width                                   */
+/* -------------------------------------------------------------------------- */
+
+// used in chat
+.min-w-0{ min-width: 0; }
+ 
+/* -------------------------------------------------------------------------- */
+/*                                    Divider                                   */
+/* -------------------------------------------------------------------------- */
+
+.divider-content-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding-left: map-get($spacers, 2);
+  padding-right: map-get($spacers, 2);
+  background-color: var(--#{$variable-prefix}card-bg);
+  font-family: $font-family-sans-serif;
+  font-size: map-get($font-sizes, '-1');
+  color: var(--#{$variable-prefix}500);
+  white-space: nowrap;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    Zanimation                              */
+/* -------------------------------------------------------------------------- */
+
+
+*[data-zanim-trigger] {
+  opacity: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    Outlined Text                              */
+/* -------------------------------------------------------------------------- */
+.nav-text-outlined {
+  -webkit-text-stroke: var(--#{$variable-prefix}300) 0.5px;
+  font-weight: bold !important; 
+
+  &.active {
+    color: $black !important;
+    -webkit-text-stroke: $black 0.5px;
+    position: relative;
+      &:before {
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 300%;
+        top: 50%;
+        left: -300%;
+        background: $warning;
+      }
+  }
+  &:hover {
+    color: $black !important;
+    -webkit-text-stroke: $black 0.5px;
+  }
+}
+
+.text-outlined {
+ -webkit-text-stroke: var(--#{$variable-prefix}200) 0.3px;
+  font-weight: bold !important; 
+}
+
+.menu-bar {
+  position: relative;
+  display: inline-block;
+  width: 2.5rem;
+  height: 1px;
+  background-color: var(--#{$variable-prefix}400);
+  margin-bottom: 10px;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--#{$variable-prefix}400);
+    transition: all 0.3s ease;
+  }
+}
+
+.menu-close-bar {
+  position: relative;
+  display: inline-block;
+  width: 2.5rem;
+  height: 1px;
+  background-color: var(--#{$variable-prefix}400);
+  transform: rotate(45deg);
+  margin-right: 10px;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--#{$variable-prefix}400);
+    transform: rotate(90deg);
+    transition: all 0.3s ease;
+  }
+}
+
+.gallery-item:hover {
+  opacity: .75;
+}
+
+.portfolio-img {
+  min-height: 18.5rem;
+  object-fit: cover;
+}
+
+.scroll-indicator {
+  font-weight: $font-weight-bold;
+  transform: rotate(90deg);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.img-circle {
+  position: absolute;
+  top: -5%;
+  left: -1%;
+  border: 1px solid rgba($white, 0.1);
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+}
+.img-circle-2 {
+  position: absolute;
+  bottom: -2.5rem;
+  right: -2.5rem;
+  border: 1px solid rgba($white, 0.1);
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+}
+
+.team-social-icon {
+  color: var(--#{$variable-prefix}400);
+  padding: 0 5px;
+  &:hover {
+     color: $warning;
+  }
+}
+.gallery-tab {
+  display: flex;
+  flex-direction: row;
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-link {
+    @include media-breakpoint-up(md) {
+      transform: rotate(180deg);
+      writing-mode: vertical-lr;
+      text-orientation: mixed;
+    }
+    position: relative;
+
+    &.active {
+      color: $black;
+      font-weight: $font-weight-bold;
+
+      &::after {
+        width: 100%;
+        @include media-breakpoint-up(md) {
+          width: 2px;
+          height: 100%;
+        }
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: $warning;
+      opacity: 1;
+      transition: all 0.3s ease;
+
+      @include media-breakpoint-up(md) {
+        top: 0;
+        width: 2px;
+        height: 0%;
+      }
+    }
+    &:hover {
+      &::after {
+        width: 100%;
+        @include media-breakpoint-up(md) {
+          width: 2px;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

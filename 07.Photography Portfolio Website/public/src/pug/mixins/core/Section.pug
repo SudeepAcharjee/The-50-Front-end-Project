@@ -1,0 +1,21 @@
+//- ===============================================
+//-    A wireframe for every section
+//- ===============================================
+
+mixin Section(container)
+  = '\n\n'
+  // ============================================
+  // <section> begin ============================
+  section&attributes(attributes)
+    = '\n'
+    //- Container for content
+    - if (typeof(container) === 'undefined' || container === 'container') { container = 'container px-md-5' }
+    div(class=container)
+
+      block
+
+    // end of .container
+    = '\n'
+  // <section> close ============================
+  // ============================================
+  = '\n\n'

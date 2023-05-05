@@ -1,0 +1,424 @@
+:root, :root.light, :root .light {
+
+  @each $color, $value in $theme-all-colors {
+    --#{$variable-prefix}#{$color}: #{$value};
+
+    /* ------------------------------ Colored Link ------------------------------ */
+    --#{$variable-prefix}colored-link-#{$color}-hover-color: #{if(color-contrast($value) == $color-contrast-light, shade-color($value, $link-shade-percentage), tint-color($value, $link-shade-percentage))};
+  }
+
+  @each $color, $value in $theme-colors-soft {
+    --#{$variable-prefix}soft-#{$color}: #{$value};
+  }
+  
+  /* -------------------------------- Accordion ------------------------------- */
+  // --#{$variable-prefix}accordion-border-color: #{rgba($black, .125)};
+  --#{$variable-prefix}accordion-button-active-color: var(--#{$variable-prefix}1000);
+  --#{$variable-prefix}accordion-button-active-bg: $white;
+
+  /* ------------------------------ Reveal Button ----------------------------- */
+  --#{$variable-prefix}btn-reveal-color: #{dark};
+  --#{$variable-prefix}btn-reveal-bg: #{shade-color($white, 10%)};
+  --#{$variable-prefix}btn-reveal-border-color: #{shade-color($white, 12.5%)};
+
+  /* ------------------------------ Falcon Button ----------------------------- */
+
+  --#{$variable-prefix}btn-falcon-background: var(--#{$variable-prefix}white);
+  --#{$variable-prefix}btn-disabled-color: #4d5969;
+  --#{$variable-prefix}btn-falcon-box-shadow: #{0 0 0 1px rgba(43, 45, 80, 0.1), 0 2px 5px 0 rgba(43, 45, 80, 0.08), 0 1px 1.5px 0 rgba($black, 0.07), 0 1px 2px 0 rgba($black, 0.08)};
+  --#{$variable-prefix}btn-falcon-hover-box-shadow: #{0 0 0 1px rgba(43, 45, 80, 0.1), 0 2px 5px 0 rgba(43, 45, 80, 0.1), 0 3px 9px 0 rgba(43, 45, 80, 0.08), 0 1px 1.5px 0 rgba($black, 0.08), 0 1px 2px 0 rgba($black, 0.08)};
+
+  --#{$variable-prefix}btn-falcon-default-color: #{map-get($grays, '800')};
+  --#{$variable-prefix}btn-falcon-default-hover-color: #{shift-color(map-get($grays, '800'), 17%)};
+  --#{$variable-prefix}btn-falcon-default-active-background: #{shade-color($white, 10%)};
+  --#{$variable-prefix}btn-falcon-default-active-border: #{shift-color(map-get($grays, '800'), 17%)};
+
+  
+  @each $color, $value in $theme-colors {
+    /* ------------------------------ Falcon button ----------------------------- */
+    --#{$variable-prefix}btn-falcon-#{$color}-color: var(--#{$variable-prefix}#{$color});
+    --#{$variable-prefix}btn-falcon-#{$color}-hover-color: #{shift-color($value, 17%)};
+    --#{$variable-prefix}btn-falcon-#{$color}-active-background: #{shift-color($value, -80%)};
+    --#{$variable-prefix}btn-falcon-#{$color}-active-color: #{shift-color($value, 17%)};
+
+    /* ---------------------------------- Alert --------------------------------- */
+    --#{$variable-prefix}alert-#{$color}-background: #{shift-color($value, $alert-bg-scale)};
+    --#{$variable-prefix}alert-#{$color}-border-color: #{shift-color($value, $alert-border-scale)};
+    --#{$variable-prefix}alert-#{$color}-color: #{shift-color($value, $alert-color-scale)};
+    --#{$variable-prefix}alert-#{$color}-link-color: #{shade-color($value, 20%)};
+
+    /* ------------------------------- List Group ------------------------------- */
+    --#{$variable-prefix}list-group-item-#{$color}-background: #{shift-color($value, $list-group-item-bg-scale)};
+    --#{$variable-prefix}list-group-item-#{$color}-color: #{shift-color($value, $list-group-item-color-scale)};
+    
+  }
+
+  --#{$variable-prefix}transparent-50: #{rgba($white, 0.5)};
+
+  /* ------------------------------- List Group ------------------------------- */
+  --#{$variable-prefix}list-group-bg: #{$white};
+  --#{$variable-prefix}list-group-action-hover-color: #{map-get($grays, '700')};
+  --#{$variable-prefix}list-group-hover-bg: #{map-get($grays, '100')};
+
+  --#{$variable-prefix}body-bg: #{$white};
+  --#{$variable-prefix}body-color: #{map-get($grays, '700')};
+  --#{$variable-prefix}headings-color: #{map-get($grays, 'black')};
+
+  --#{$variable-prefix}link-color: #{map-get($theme-colors, 'primary')};
+  --#{$variable-prefix}link-hover-color: #{shift-color(map-get($theme-colors, 'primary'), $link-shade-percentage)};
+
+  // --#{$variable-prefix}border-color: #{rgba($black, 0.1)};
+  --#{$variable-prefix}border-color: #{map-get($grays, '300')};
+
+  /* --------------------------------- Shadow --------------------------------- */
+  --#{$variable-prefix}box-shadow: #{0 7px 14px 0 rgba(65, 69, 88, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.07)};
+  --#{$variable-prefix}box-shadow-sm: #{ 0 .125rem .25rem rgba($black, .075)};
+  --#{$variable-prefix}box-shadow-lg: #{0 1rem 4rem rgba($black, 0.175)};
+  --#{$variable-prefix}box-shadow-inset: #{inset 0 1px 2px rgba($black, .075)};
+
+  --#{$variable-prefix}component-active-color: #{map-get($theme-colors, 'white')};
+  --#{$variable-prefix}component-active-bg: #{map-get($theme-colors, 'primary')};
+
+
+  // --#{$variable-prefix}text-muted: #{map-get($grays, '500')};
+  --#{$variable-prefix}text-muted: #949494;
+
+  --#{$variable-prefix}blockquote-footer-color: #{map-get($grays, '600')};
+
+  --#{$variable-prefix}hr-color: var(--#{$variable-prefix}border-color); // Review
+  --#{$variable-prefix}hr-opacity: 0.25;
+
+  --#{$variable-prefix}mark-bg: #fcf8e3; // Review
+
+  // Need To Work
+  --#{$variable-prefix}input-btn-focus-color: #{rgba($component-active-bg, $input-btn-focus-color-opacity)};
+  
+  --#{$variable-prefix}btn-link-color: #{$btn-link-color};
+  --#{$variable-prefix}btn-link-hover-color: #{$link-hover-color};
+  --#{$variable-prefix}btn-disabled-color: #{map-get($grays, '600')};
+
+  --#{$variable-prefix}heading-color: #{$black};
+
+  /* ---------------------------------- Form ---------------------------------- */
+  --#{$variable-prefix}input-bg: #{$white};
+  --#{$variable-prefix}input-color: #{map-get($grays, '900')};
+  --#{$variable-prefix}input-border-color: #{map-get($grays, '300')};
+  --#{$variable-prefix}input-focus-border-color: #{tint-color($component-active-bg, 50%)};
+  
+  --#{$variable-prefix}input-focus-color: #{$input-color};
+
+  --#{$variable-prefix}input-placeholder-color: #{map-get($grays, '400')};
+  --#{$variable-prefix}input-plaintext-color: #{$input-plaintext-color};
+
+  --#{$variable-prefix}form-check-label-color: #{$form-check-label-color};
+
+  --#{$variable-prefix}form-check-input-bg: #{$form-check-input-bg};
+  --#{$variable-prefix}form-check-input-border: #{$form-check-input-border};
+  --#{$variable-prefix}form-check-input-border-color: #{map-get($grays, '400')};
+
+  --#{$variable-prefix}form-check-input-checked-color: #{$component-active-color};
+  --#{$variable-prefix}form-check-input-checked-bg-color: #{$component-active-bg};
+  --#{$variable-prefix}form-check-input-checked-border-color: #{$form-check-input-checked-bg-color};
+
+  --#{$variable-prefix}form-check-input-indeterminate-color: #{$component-active-color};
+  --#{$variable-prefix}form-check-input-indeterminate-bg-color: #{$component-active-bg};
+  --#{$variable-prefix}form-check-input-indeterminate-border-color: #{$form-check-input-indeterminate-bg-color};
+
+  --#{$variable-prefix}form-switch-color:rgba(0, 0, 0, .25);
+  --#{$variable-prefix}form-switch-focus-color: #{$input-focus-border-color};
+  --#{$variable-prefix}form-switch-checked-color: #{$component-active-color};
+
+  --#{$variable-prefix}input-group-addon-color: #{$input-border-color};
+  --#{$variable-prefix}input-group-addon-bg: #{map-get($grays, '200')};
+  --#{$variable-prefix}input-group-addon-border-color: #{$input-border-color};
+
+  --#{$variable-prefix}form-select-color: #{$input-color};
+  --#{$variable-prefix}form-select-disabled-color: #{map-get($grays, '600')};
+  --#{$variable-prefix}form-select-bg: #{$input-bg};
+  --#{$variable-prefix}form-select-disabled-bg: #{map-get($grays, '200')};
+  --#{$variable-prefix}form-select-indicator-color: #{map-get($grays, '800')};
+  --#{$variable-prefix}form-select-focus-box-shadow: #{0 0 0 $form-select-focus-width $input-btn-focus-color};
+
+
+  --#{$variable-prefix}form-select-border-color: #{$input-border-color};
+  --#{$variable-prefix}form-select-focus-border-color: #{$input-focus-border-color};
+
+  --#{$variable-prefix}form-range-track-bg: #{map-get($grays, '300')};
+  --#{$variable-prefix}form-range-track-box-shadow: #{$box-shadow-inset};
+
+  --#{$variable-prefix}form-range-thumb-bg: #{$component-active-bg};
+  --#{$variable-prefix}form-range-thumb-box-shadow: #{0 .1rem .25rem rgba($black, .1)};
+  --#{$variable-prefix}form-range-thumb-focus-box-shadow: #{0 0 0 1px $body-bg, $input-focus-box-shadow};
+  --#{$variable-prefix}form-range-thumb-active-bg: #{lighten($component-active-bg, 35%)};
+  --#{$variable-prefix}form-range-thumb-disabled-bg: #{map-get($grays, '500')};
+  
+  --#{$variable-prefix}form-file-focus-border-color: #{$input-focus-border-color};
+  --#{$variable-prefix}form-file-focus-box-shadow: #{$input-focus-box-shadow};
+  --#{$variable-prefix}form-file-disabled-bg: #{$input-disabled-bg};
+  --#{$variable-prefix}form-file-disabled-border-color: #{$input-disabled-border-color};
+
+  --#{$variable-prefix}form-file-color: #{$input-color};
+  --#{$variable-prefix}form-file-bg: #{$input-bg};
+  --#{$variable-prefix}form-file-border-color: #{$input-border-color};
+  --#{$variable-prefix}form-file-box-shadow: #{$input-box-shadow};
+  --#{$variable-prefix}form-file-button-bg: #{$input-group-addon-bg};
+
+  --#{$variable-prefix}form-feedback-valid-color: #{map-get($theme-colors, 'success')};
+  --#{$variable-prefix}form-feedback-invalid-color: #{map-get($theme-colors, 'danger')};
+
+  --#{$variable-prefix}form-feedback-icon-valid-color: var(--#{$variable-prefix}form-feedback-valid-color);
+  --#{$variable-prefix}form-feedback-icon-invalid-color: var(--#{$variable-prefix}form-feedback-invalid-color);
+
+  /* ----------------------------------- Nav ---------------------------------- */
+  --#{$variable-prefix}nav-link-color: null;
+  --#{$variable-prefix}nav-link-hover-color: null;
+  --#{$variable-prefix}nav-link-disabled-color: #{map-get($grays, '600')};
+
+  --#{$variable-prefix}nav-tabs-border-color: #{map-get($grays, '300')};
+  --#{$variable-prefix}nav-tabs-link-hover-border-color: #{map-get($grays, '200') map-get($grays, '200') $nav-tabs-border-color};
+  --#{$variable-prefix}nav-tabs-link-active-color: #{map-get($grays, '700')};
+  --#{$variable-prefix}nav-tabs-link-active-bg: #{$body-bg};
+  --#{$variable-prefix}nav-tabs-link-active-border-color: #{map-get($grays, '300') map-get($grays, '300') $nav-tabs-link-active-bg};
+
+  --#{$variable-prefix}bg-navbar-glass: #{rgba(map-get($grays, '200'), 0.96)};
+  --#{$variable-prefix}nav-pills-link-active-color: #{$component-active-color};
+  --#{$variable-prefix}nav-pills-link-active-bg: #{$component-active-bg};
+
+  /* --------------------------------- Navbar --------------------------------- */
+  --#{$variable-prefix}navbar-dark-color: #{rgba($white, 0.7)};
+  --#{$variable-prefix}navbar-dark-hover-color: #{rgba($white, .8)};
+
+  --#{$variable-prefix}navbar-dark-active-color: #{$white};
+  --#{$variable-prefix}navbar-dark-disabled-color: #{rgba($white, .25)};
+  --#{$variable-prefix}navbar-dark-toggler-border-color: #{rgba($white, .1)};
+
+  --#{$variable-prefix}navbar-light-color: #{rgba($gray-400, .95)};
+  --#{$variable-prefix}navbar-light-hover-color: #{$black};
+  --#{$variable-prefix}navbar-light-active-color: #{$black};
+  --#{$variable-prefix}navbar-light-disabled-color: #{rgba($black, .25)};
+  --#{$variable-prefix}navbar-light-toggler-border-color: #{rgba($black, .1)};
+
+  --#{$variable-prefix}navbar-light-brand-color: #{map-get($theme-colors, 'primary')};
+  --#{$variable-prefix}navbar-dark-brand-color: #{map-get($theme-colors, 'primary')};
+
+
+  /* -------------------------------------------------------------------------- */
+  /*                               Navbar Vertical                              */
+  /* -------------------------------------------------------------------------- */
+
+  /* --------------------------------- Default -------------------------------- */
+  --#{$variable-prefix}navbar-vertical-collapsed-hover-shadow-color: #{rgba($black, 0.2)};
+  --#{$variable-prefix}navbar-vertical-bg-color: var(--#{$variable-prefix}bg-navbar-glass);
+  --#{$variable-prefix}navbar-vertical-link-color: #{map-get($grays, '700')};
+  --#{$variable-prefix}navbar-vertical-link-hover-color: #{map-get($grays, '1000')};
+  --#{$variable-prefix}navbar-vertical-link-active-color: #{map-get($theme-colors, 'primary')};
+  --#{$variable-prefix}navbar-vertical-link-disable-color: #{map-get($grays, '400')};
+  --#{$variable-prefix}navbar-vertical-hr-color: #{rgba($black, 0.08)};
+  --#{$variable-prefix}navbar-vertical-scrollbar-color: #{rgba(map-get($grays, '600'), 0.3)};
+
+  /* ----------------------------- Navbar Inverted ---------------------------- */
+
+
+
+  /* --------------------------- End Navbar Vertical -------------------------- */
+
+  /* -------------------------------- Dropdown -------------------------------- */
+  --#{$variable-prefix}dropdown-bg: #{map-get($grays, 'white')};
+  --#{$variable-prefix}dropdown-color: #{map-get($grays, '300')};
+  // --#{$variable-prefix}dropdown-border-color: #{rgba($black, 0.075)};
+  --#{$variable-prefix}dropdown-border-color: var(--#{$variable-prefix}border-color);
+  --#{$variable-prefix}dropdown-box-shadow: #{$box-shadow};
+  --#{$variable-prefix}dropdown-link-color: #{map-get($grays, '900')};
+  --#{$variable-prefix}dropdown-link-hover-color: #{darken(map-get($grays, '900'), 5%)};
+  --#{$variable-prefix}dropdown-link-hover-bg: #{map-get($grays, '100')};
+  --#{$variable-prefix}dropdown-link-active-color: #{$component-active-color};
+  --#{$variable-prefix}dropdown-link-active-bg: #{$component-active-bg};
+  --#{$variable-prefix}dropdown-link-disabled-color: #{map-get($grays, '600')};
+  --#{$variable-prefix}dropdown-header-color: #{map-get($grays, '600')};
+
+  --#{$variable-prefix}dropdown-dark-color: #{map-get($grays, '300')};
+  --#{$variable-prefix}dropdown-dark-bg: #{map-get($grays, '800')};
+  --#{$variable-prefix}dropdown-dark-border-color: #{$dropdown-border-color};
+  --#{$variable-prefix}dropdown-dark-divider-bg: #{$dropdown-divider-bg};
+  --#{$variable-prefix}dropdown-dark-box-shadow: null;
+  --#{$variable-prefix}dropdown-dark-link-color: #{$dropdown-dark-color};
+  --#{$variable-prefix}dropdown-dark-link-hover-color: #{$white};
+  --#{$variable-prefix}dropdown-dark-link-hover-bg: #{rgba($white, .15)};
+  --#{$variable-prefix}dropdown-dark-link-active-color: #{$dropdown-link-active-color};
+  --#{$variable-prefix}dropdown-dark-link-active-bg: #{$dropdown-link-active-bg};
+  --#{$variable-prefix}dropdown-dark-link-disabled-color: #{map-get($grays, '500')};
+  --#{$variable-prefix}dropdown-dark-header-color: #{map-get($grays, '500')};
+
+  /* ------------------------------- Pagination ------------------------------- */
+  --#{$variable-prefix}pagination-color: #{$black};
+  --#{$variable-prefix}pagination-bg: #{$white};
+  --#{$variable-prefix}pagination-border-color: #{map-get($grays, '200')};
+  --#{$variable-prefix}pagination-hover-color: #{$white};
+  --#{$variable-prefix}pagination-hover-bg: #{$primary};
+  --#{$variable-prefix}pagination-hover-border-color: #{$primary};
+  --#{$variable-prefix}pagination-active-color: #{$white};
+  --#{$variable-prefix}pagination-active-bg: #{$primary};
+  --#{$variable-prefix}pagination-active-border-color: #{$primary};
+  --#{$variable-prefix}pagination-disabled-bg: #{$white};
+
+  /* ---------------------------------- Card ---------------------------------- */
+  --#{$variable-prefix}card-border-color: #{rgba($black, 0.125)};
+  --#{$variable-prefix}card-cap-bg: #{rgba($black, 0.03)};
+  --#{$variable-prefix}card-cap-color: null;
+  --#{$variable-prefix}card-color: null;
+  // --#{$variable-prefix}card-bg: #{$primary};
+  
+  /* --------------------------------- Tooltip -------------------------------- */
+  --#{$variable-prefix}tooltip-color: #{$white};
+  --#{$variable-prefix}tooltip-bg: #{$black};
+  --#{$variable-prefix}tooltip-arrow-color: #{$tooltip-bg};
+
+  /* --------------------------------- Popover -------------------------------- */
+  --#{$variable-prefix}popover-bg: #{$white};
+  --#{$variable-prefix}popover-border-color: #{rgba($black, .2)};
+  --#{$variable-prefix}popover-box-shadow: #{$box-shadow};
+  --#{$variable-prefix}popover-header-bg: #{shade-color($white, 6%)};
+  --#{$variable-prefix}popover-header-border-bottom-color: #{shade-color($white, 16%)};
+  --#{$variable-prefix}popover-header-color: #{$headings-color};
+  --#{$variable-prefix}popover-body-color: #{$body-color};
+  --#{$variable-prefix}popover-arrow-color: #{$white};
+  --#{$variable-prefix}popover-arrow-outer-color: #{fade-in(rgba($black, .2), .05)};
+
+  /* ---------------------------------- Toast --------------------------------- */
+  --#{$variable-prefix}toast-color:                       #{$toast-color};
+  --#{$variable-prefix}toast-background-color:            #{rgba($white, .85)};
+  --#{$variable-prefix}toast-border-color:                rgba(0, 0, 0, .1);
+  --#{$variable-prefix}toast-box-shadow:                  #{$box-shadow};
+  --#{$variable-prefix}toast-header-color:                #{map-get($grays, '600')};
+  --#{$variable-prefix}toast-header-background-color:     #{rgba($white, .85)};
+  --#{$variable-prefix}toast-header-border-color:         rgba(0, 0, 0, .05);
+
+  /* ---------------------------------- Badge --------------------------------- */
+  --#{$variable-prefix}badge-color: #{$white};
+  
+  /* ---------------------------------- Modal --------------------------------- */
+  --#{$variable-prefix}modal-content-bg: #{$white};
+
+
+  /* ---------------------------------- Table --------------------------------- */
+  --#{$variable-prefix}table-border-color: #{map-get($grays, '200')};
+  @each $color, $value in $table-variants {
+    --#{$variable-prefix}table-#{$color}-bg: #{$value};
+    --#{$variable-prefix}table-#{$color}-color: #{color-contrast(opaque(map-get($grays, '200'), $value))};
+    --#{$variable-prefix}table-#{$color}-hover-bg: #{mix(color-contrast(opaque(map-get($grays, '200'), $value)), $value, percentage($table-hover-bg-factor))};
+    --#{$variable-prefix}table-#{$color}-hover-color: #{color-contrast(mix(color-contrast(opaque(map-get($grays, '200'), $value)), $value, percentage($table-hover-bg-factor)))};
+    --#{$variable-prefix}table-#{$color}-striped-bg: #{mix(color-contrast(opaque(map-get($grays, '200'), $value)), $value, percentage($table-striped-bg-factor))};
+    --#{$variable-prefix}table-#{$color}-striped-color: #{color-contrast(mix(color-contrast(opaque(map-get($grays, '200'), $value)), $value, percentage($table-striped-bg-factor)))};
+    --#{$variable-prefix}table-#{$color}-active-bg: #{mix(color-contrast(opaque(map-get($grays, '200'), $value)), $value, percentage($table-active-bg-factor))};
+    --#{$variable-prefix}table-#{$color}-active-color: #{color-contrast(mix(color-contrast(opaque(map-get($grays, '200'), $value)), $value, percentage($table-active-bg-factor)))};
+    --#{$variable-prefix}table-#{$color}-border-color: #{mix(color-contrast(opaque(map-get($grays, '200'), $value)), $value, percentage($table-border-factor))};
+  }
+
+  // .table {
+  //   --#{$variable-prefix}table-striped-bg: #{map-get($grays, '100')};
+  // }
+
+  /* --------------------------------- Avarar --------------------------------- */
+  --#{$variable-prefix}avatar-status-border-color: #{$white};
+  --#{$variable-prefix}avatar-name-bg: #{map-get($grays, '900')};
+  --#{$variable-prefix}avatar-button-bg: #{map-get($grays, '400')};
+  --#{$variable-prefix}avatar-button-hover-bg: #{map-get($grays, '500')};
+
+  /* ------------------------------ Notification ------------------------------ */
+  --#{$variable-prefix}notification-bg: #{map-get($grays, 'white')};
+  --#{$variable-prefix}notification-title-bg: #{map-get($grays, '100')};
+  --#{$variable-prefix}notification-unread-bg: #{map-get($grays, '200')};
+  --#{$variable-prefix}notification-unread-hover-bg: #{darken(map-get($grays, '200'), 5%)};
+  --#{$variable-prefix}notification-indicator-border-color: #{map-get($grays, '200')};
+
+  /* --------------------------------- Kanban --------------------------------- */
+  --#{$variable-prefix}kanban-bg: #{map-get($grays, '100')};
+  --#{$variable-prefix}kanban-header-bg: var(--#{$variable-prefix}kanban-bg);
+  --#{$variable-prefix}kanban-item-bg: #{map-get($grays, 'white')};
+  --#{$variable-prefix}kanban-item-color: #{map-get($grays, '900')};
+  --#{$variable-prefix}kanban-btn-add-hover-bg: #{map-get($grays, '200')};
+  --#{$variable-prefix}kanban-draggable-source-dragging-bg: #{map-get($grays, '200')};
+  --#{$variable-prefix}kanban-bg-attachment-bg: #{map-get($grays, '300')};
+  --#{$variable-prefix}kanban-footer-color: #{map-get($grays, '600')};
+  --#{$variable-prefix}kanban-nav-link-card-details-color: #{map-get($grays, '700')};
+  --#{$variable-prefix}kanban-nav-link-card-details-hover-bg: #{map-get($grays, '200')};
+
+  /* --------------------------- Gradient Background -------------------------- */
+  --#{$variable-prefix}bg-shape-bg: #4695ff;
+  --#{$variable-prefix}bg-shape-bg-ltd: #{linear-gradient(-45deg,#4695ff, #1970e2)};
+  --#{$variable-prefix}bg-shape-bg-dtl: #{linear-gradient(-45deg,#1970e2, #4695ff)};
+
+  --#{$variable-prefix}line-chart-gradient: #{linear-gradient(-45deg, #014ba7, #0183d0)};
+  --#{$variable-prefix}card-gradient: #{linear-gradient(-45deg, #1970e2, #4695ff)};
+  --#{$variable-prefix}progress-gradient: #{linear-gradient(-45deg, #1970e2, #4695ff)};
+  --#{$variable-prefix}bg-circle-shape: none;
+  --#{$variable-prefix}bg-circle-shape-bg: #4695ff;
+  --#{$variable-prefix}modal-shape-header: #{linear-gradient(-45deg,#1970e2,#4695ff)};
+  --#{$variable-prefix}modal-shape-header-bg: #4494ff;
+
+  /* ------------------------------ Full Calendar ----------------------------- */
+  --fc-button-bg-color: #{map-get($grays, '900')};
+  --fc-button-border-color: #{map-get($grays, '900')};
+  --fc-button-hover-bg-color: #{$dark};
+  --fc-button-hover-border-color: #{$dark};
+  --fc-button-active-bg-color: #{$dark};
+  --fc-button-active-border-color: #{$dark};
+  --fc-button-list-day-cushion: #{$white};
+
+  /* -------------------------------- Flatpickr ------------------------------- */
+  --#{$variable-prefix}flatpickr-calendar-bg: #{$white};
+
+  /* -------------------------------- Flatpickr ------------------------------- */
+  --#{$variable-prefix}leaflet-bar-bg: #{$white};
+  --#{$variable-prefix}leaflet-popup-content-wrapper-bg: #{$white};
+  
+  /* --------------------------------- Choices -------------------------------- */
+  --#{$variable-prefix}choices-item-selectable-highlighted-bg: #{$white};
+  --#{$variable-prefix}choices-item-has-no-choices-bg: #{$white};
+
+  /* -------------------------------- Thumbnail ------------------------------- */
+  --#{$variable-prefix}thumbnail-bg: #{$white};
+
+  /* ---------------------------------- Chat ---------------------------------- */
+  --#{$variable-prefix}chat-contact-bg: var(--#{$variable-prefix}card-bg);
+
+  /* --------------------------------- Tinymce -------------------------------- */
+  --#{$variable-prefix}tinymce-bg: #{$white};
+  
+  /* --------------------------------- Swiper --------------------------------- */
+  --#{$variable-prefix}swiper-nav-bg: #{rgba($white, 0.8)};
+
+  /* --------------------------------- Rater --------------------------------- */
+  --#{$variable-prefix}star-rating-bg-image: #{url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFdElEQVR4nO2aXWxURRTH/2dut58Imho1SgStuit+vBo0BkgkRjDog+VBiJEXqJhKK21x+7EdUu5u2W1Uqi8Qo4YQY6gQDQlRn9RENGoMD0a7RCzGRCJGBLRF9mOOD+waKHe7e2f23mt0f4/zceY/Z2fmzJm7QI0aNWr8j6EgBu3sHG9oXHC2gxQvJ/CUhbpUPD5wMggtwv8hmZrmn3mHmF8G4XEm6s5R/kinlPP91xKAA7YN2A8CeHRW8eLmrOjwWwsQgAMYqs+xnLGls3O8wW89vjqgp1/eDWC1YyXhxqYFvz/ppx7AZwcIsnrmbMDUK6X0V5NfA/VJuRDgdWWa3Tmds1b5IqiAf97OUReAunLNCOx4RniFL/eALimvrs+KnwDMq6yHWJq0Bz/3VFRxJD8GabgY4iqcPABWvd6puRzPV4CUsnEmK6YA3OCiG1tKRRIJecwrXUU8XwHTGbEe7iYPAJQXYqsXeq4YyEvjUkoxkxXfAbhDo/uFOrYWxeMDv1Rb16V4ugJmctYa6E0eABpyItdZTT1OeLwFDEMa02YpZeWHpwaeOaBncOQhMJYamrnmvMdJUtXOgI0bd4daW0+25S0rAoV7iLiHgWqkuDkChjik9ibl8EmAuAo2/8G1A7ZKea24IMJkcQRAmJkiBIQBtAGwqiluNgScU4w0EU2CkWZSk8ycnleP76WUf2nadCYajbfmrfwDxIWJgiMAhQG06k7AQxSAEwAmiTnNRJMEMWkxpePx/lNzrRpHB7wwOLJcMR+Cm9vbv5cZAK81h1S3lFLNrnQ8BBVjF/4bkweAZgDPnc+IJ5wqS0QBDnsoKBAYdLtTubMDCF95qiYAhMUfOpY7FSqlOgCc9lSRjzDR86MjsS+d6hwdMBaX3zCrlQDOeKrMBwiIpnYMvVSqvuRNMBWXXwPiYQB/eKLMBxgY3mnHRudqM+dVOGkPfsEKjwCYrqoyHyAgnrKHRipoV57CveAwgCZjZT7AwFjKHuqr5Npc8VW4r3/7ShAdAuD7xwuXjCftoa5KcwZXuUDv4MgqYn4XQEhLmscw8+5UPPaMm4TJVTqc2jF0GERrAeRcq/MceqOlnje7zRa10uHege3tBHobgXxdvhIm7DuRjjw9MbE277av1gRS9vAEwE8BqGpurgVhf0ud2qAz+YvdDegb3L4BTK+b2DCBgffO/np9+549m7K6NoweMD795KOj9y9bcRsB95rY0SRTp+qW7drV/aeJEeM9TMzvm9rQg48mEv2/mVoxP8RYLDa2oYWor4oVYwuEu6qgQwOOtLfvN36DrEIY4yXmNrRobGv79hZTI0YOKPwCEVMRurBFxqvPyAGLw+lbEWBuoBCwAwhB7f/i+GS8/YwcwBzY/i8S7AoILgIUMY8EZluAzZegIY2Fc0gbbQdc9DwHFgGKCFZGP4K2AwoxuFGz+xkCehFSNxHzKoCO6uowjQRl/7dXCs0YnCXmVwWH7Evu8T9LKT+Yzoj1BNggLHRl0fAc0ncAiyVuHl8INKEI0aQdOz67rvDRcm9394sToabpLhBHAVxVkV02c4D2e0DfwMi+Cv76CoCPKEU9Y4nYZ5Xa7pHyOpEVwwA2oXzKfmHqWKRF90FEewVUkAMcZ/C2lB076PadbkzKUwCejUblK3kSO0FYM0fzhkXh9M0AptyMUcQkDJY6AE8D2NIcUktS9vABk7+0JBJyMhmPPcYKywEu9cGWQ3nrnO4Y2g5gYN+sogyIU5mQakvasXEpZUbX9mxSidjHzSG+jxjrAPx4eS29afIwor0FWkJq9HzOOsvMq5n5B0vx2OioPKFrrxyFg/ItKeXBmazoAGMFQEea6/MlP3zWqFGjRo0y/A3lxcMNXfCjjAAAAABJRU5ErkJggg==')};
+  
+  /* ---------------------------------- Toast --------------------------------- */
+  --#{$variable-prefix}toast-background-color: #{rgba($white, 0.85)};
+
+  /* --------------------------------- Wizard --------------------------------- */
+  --#{$variable-prefix}theme-wizard-nav-item-circle-bg: #{$white};
+  
+  /* -------------------------------- Card Span ------------------------------- */
+  --#{$variable-prefix}card-span-img-bg: #{$white};
+  --#{$variable-prefix}card-span-img-box-shadow: #{$box-shadow-sm};
+  --#{$variable-prefix}card-span-img-hover-box-shadow: #{$box-shadow-lg};
+
+  /* ------------------------------ showcase-page ------------------------------ */
+  --#{$variable-prefix}setting-toggle-shadow: #{0 -7px 14px 0 rgba(65, 69, 88, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.07)};
+  
+  /* -------------------------------- Scrollbar ------------------------------- */
+  --#{$variable-prefix}scrollbar-bg: #{rgba($gray-400, 0.55)};
+
+  /* ------------------------------- Falcon Pill ------------------------------ */
+  --#{$variable-prefix}nav-pills-falcon-active-bg-color: #{$white};
+
+  /* ------------------------------- Hover Background ------------------------------ */
+  @each $color, $value in $grays {
+    --#{$variable-prefix}hover-bg-#{$color}: #{map-get($grays, $color)};
+  }
+  
+  
+  /* ------------------------------- Custom disabled button ------------------------------ */
+  --#{$variable-prefix}btn-disabled-custom-background: #{rgba($light, 0.65)};
+  --#{$variable-prefix}btn-disabled-custom-color: #{rgba($dark, 0.3)};
+
+}

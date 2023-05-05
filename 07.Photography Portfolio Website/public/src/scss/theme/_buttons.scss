@@ -1,0 +1,13 @@
+/*-----------------------------------------------
+|   Button
+-----------------------------------------------*/
+.btn-link{font-weight: $font-weight-bold;}
+
+.btn.btn-outline-light.border-2x { border-color: rgba($white, 0.5); }
+
+.btn-outline-light:hover, .btn-light, .btn-light:hover { color: $dark; }
+.btn-xs{ padding: .2rem .8rem; }
+
+.btn-success, .btn-info{
+  color: $white;
+}

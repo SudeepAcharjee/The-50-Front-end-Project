@@ -1,0 +1,44 @@
+/*-----------------------------------------------
+|   Icons group
+-----------------------------------------------*/
+.icon-group {
+  display: flex;
+  .icon-item:not(:last-child) {
+    margin-right: map_get($spacers, 2);
+  }
+}
+.icon-item {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--#{$variable-prefix}700);
+  transition: $transition-base;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 0;
+  font-size: $font-size-sm;
+  box-shadow: $box-shadow-sm;
+  @include hover-focus {
+    background-color: var(--#{$variable-prefix}200);
+  }
+
+  &.icon-item-sm {
+    height: 1.875rem;
+    width: 1.875rem;
+  }
+  
+  &.icon-item-lg {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+}
+
+
+.fa-icon-wait{
+  opacity: 0;
+  .fontawesome-i2svg-active &{
+    opacity: 1;
+  }
+}
+

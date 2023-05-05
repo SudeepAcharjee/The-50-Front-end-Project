@@ -1,0 +1,38 @@
+mixin Contact
+  +Section.py-4#contact
+    .row.align-items-center
+      .my-4.text-center
+        h1.text-uppercase.fs-lg-8.fs-6.fw-bolder.text-300.lh-1.position-relative.z-index-0 Contact
+        h1.fw-bolder.text-outlined.fs-7.text-white.lh-1.mt-n4.position-relative.z-index--1 Get in Touch
+        form.my-5.px-3
+          .row.g-3.g-md-5
+            .col-md-6
+              .card.border-0
+                .form-floating.mb-3
+                  input.form-control.form-fotogency-header-control#floatingEmail(type='email' placeholder='name@example.com')
+                  label(for='floatingEmail') Email
+                .form-floating.mb-3
+                  input.form-control.form-fotogency-header-control#floatingName(type='text' placeholder='name')
+                  label(for='floatingName') Your name
+                .form-floating.mb-3
+                  input.form-control.form-fotogency-header-control#floatingPhone(type='tel' placeholder='name@example.com')
+                  label(for='floatingPhone') Phone number
+                .form-floating.mb-3
+                  input.form-control.form-fotogency-header-control#floatingLocation(type='text' placeholder='Desired Location')
+                  label(for='floatingLocation') Desired location
+                .form-floating.mb-3
+                  input.form-control.form-fotogency-header-control.text-400#floatingDate(type='text' placeholder='Desired Date')
+                  label(for='floatingDate') Desired Date
+            .col-md-6
+              .card.border-0
+                input.form-control.opacity-0.pb-0.pe-none.d-none.d-md-block
+                .form-floating.mb-3
+                  textarea.form-control.form-fotogency-header-control.border.ps-2.form-fotogency-header-control#floatingTextarea(style="height: 210px" ,placeholder='Leave a comment here')
+                  label.ps-2(for='floatingTextarea') Message
+                .form-floating.mb-3
+                  input.form-control.form-fotogency-header-control#floatingSource(type='text' placeholder='How did you hear about us?')
+                  label(for='floatingSource') How did you hear about us?
+            .col-12.text-end.mt-3
+              button.btn.btn-link.text-warning.p-0(type='submit')
+                span.fw-bolder.text-uppercase Submit
+                img(src=`${CWD}assets/img/icons/long-arrow.png` alt="").ms-3

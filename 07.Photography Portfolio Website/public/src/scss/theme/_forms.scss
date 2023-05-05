@@ -1,0 +1,40 @@
+/*-----------------------------------------------
+|   Form
+-----------------------------------------------*/
+.form-floating {
+  position: relative;
+
+  > label{
+    font-size: map_get($font-sizes, '1');
+    color: $gray-400;
+    padding: 1rem 0;
+  }
+  > .form-control{
+    &:focus{
+       + label{
+        color: $gray-400;
+      }
+    }
+  }
+}
+
+// - form control
+//
+// General form controls (plus a few specific high-level interventions)
+//
+
+.form-fotogency-header-control {
+  background-color: transparent;
+  background-clip: padding-box;
+  border: 0 solid $input-border-color;
+  border-bottom: 1px solid $gray-300;
+  border-radius: 0;
+  color: $gray-400;
+  &:hover, &:focus{
+    background-color: transparent;
+    color: $gray-400;
+    border-bottom: 1px solid $warning;
+  }
+}
+
+

@@ -1,0 +1,78 @@
+append variables 
+  - 
+    var exhibitions = [
+      {
+        image: 'img01.png',
+        title: 'Through the Eyes of Kubrick',
+        type: 'Individual',
+        desc: 's a genre of Japanese art that became popular in the 17th century through to the 19th century. The word roughly translates as “pictures of the floating world” and artists belonging to the movement produced woodblock prints and paintings of scenes from history and folktales, sumo wrestlers, landscapes of flora and fauna, and a touch of erotica.',
+        year: 2017,
+      },
+      {
+        image: 'img02.png',
+        title: 'Wave of Surrealism in photography',
+        type: 'Collective',
+        desc: 's a genre of Japanese art that became popular in the 17th century through to the 19th century. The word roughly translates as “pictures of the floating world” and artists belonging to the movement produced woodblock prints and paintings of scenes from history and folktales, sumo wrestlers, landscapes of flora and fauna, and a touch of erotica.',
+        year: 2015,
+      },
+      {
+        image: 'img03.png',
+        title: 'Through the Eyes of Kubrick',
+        type: 'Individual',
+        desc: 's a genre of Japanese art that became popular in the 17th century through to the 19th century. The word roughly translates as “pictures of the floating world” and artists belonging to the movement produced woodblock prints and paintings of scenes from history and folktales, sumo wrestlers, landscapes of flora and fauna, and a touch of erotica.',
+        year: 2015,
+      },
+      {
+        image: 'img04.png',
+        title: 'Through the Eyes of Kubrick',
+        type: 'Individual',
+        desc: 's a genre of Japanese art that became popular in the 17th century through to the 19th century. The word roughly translates as “pictures of the floating world” and artists belonging to the movement produced woodblock prints and paintings of scenes from history and folktales, sumo wrestlers, landscapes of flora and fauna, and a touch of erotica.',
+        year: 2015,
+      },
+    ]
+
+
+mixin Slide(config)
+  .swiper-slide
+    .row.align-items-xl-center
+      .col-lg-5
+        img(src=`${CWD}assets/img/exhibitions/${config.image}` alt="").img-fluid.w-100
+        .position-absolute.top-5.start-5.mt-n1.d-flex.flex-column.align-items-center
+          span.rounded-circle.bg-white.p-2.d-block
+          span.text-white.fw-bold=config.year
+      .col-lg-6.col-xl-5.mt-4.mt-lg-0
+        h1.fw-bolder.mb-3=config.title
+        p.text-warning.fs-3.opacity-75=config.type
+        p.fs-0=config.desc
+        button.btn.btn-link.text-warning.p-0.fs-2
+          span.fw-bolder Details 
+          img(src=`${CWD}assets/img/icons/long-arrow.png` alt="").ms-3
+
+
+mixin ExhibitionSlides 
+  +Section('container-fluid px-0').py-3.position-relative
+    .position-absolute.w-100.border-dashed-bottom.opacity-25.top-5.z-index-2
+    .container.px-md-5
+      .row.g-0
+        .col-lg-12.pb-6.px-0.mb-lg-0
+          .swiper-container.swiper-theme(data-swiper!={
+            slidesPerView: 1,
+            breakpoints: {
+              576: {
+                slidesPerView: 1.2,
+              },
+            },
+            spaceBetween: 30,
+            grabCursor: true,
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+            loop: true,
+            loopedSlides: 3,
+            slideToClickedSlide: true,
+          })
+            .swiper-wrapper
+              each exhibition in exhibitions
+                +Slide(exhibition)
+          .swiper-theme.swiper-pagination.d-flex.mt-4
