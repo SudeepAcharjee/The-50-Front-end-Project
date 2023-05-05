@@ -1,0 +1,190 @@
+
+
+// Header Bottom
+.header-area{
+    .main-header{
+        padding: 0 85px;
+        @media #{$laptop}{
+            padding: 0 15px;
+        }
+        @media #{$lg}{
+            padding: 0 20px;
+        }
+        @media #{$md}{
+            padding: 0 20px;
+        }
+        @media #{$sm}{
+            padding: 0 20px;
+        }
+        @media #{$xs}{
+            padding: 0 15px;
+        }
+        // Responsive header padding top
+    
+       @media #{$md}{
+            padding-top: 16px;
+            padding-bottom: 21px;
+        }
+        @media #{$sm}{
+            padding-top: 16px;
+            padding-bottom: 21px;
+        }
+        @media #{$xs}{
+            padding-top: 16px;
+            padding-bottom: 21px;
+        }
+        &.main-header2{
+            padding: 0;
+        }
+    }
+    .menu-wrapper {
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        &.menu-wrapper2{
+            justify-content: center;
+        }
+        // Menu
+        .main-menu{
+            @media #{$laptop}{
+                 margin-right: 30px;
+            }
+            &.main-header2{
+                padding: 0;
+            }
+            ul{
+                li{
+                    display: inline-block;
+                    position: relative;
+                    z-index: 1;
+                    a{
+                        color: #fff;
+                        font-weight: 500;
+                        padding: 39px 21px;
+                        display: block;
+                        font-size: 18px;
+                        font-family: $font_1;
+                        @include transition(.3s);
+                        text-transform: uppercase;
+                        text-decoration: underline transparent;
+                        @media #{$lg}{
+                            padding: 39px 9px;
+                        }
+                    }
+                    // Hover Effect
+                    &:hover{
+                        & > a{
+                            color:#fff;
+                            text-decoration: underline;
+                        }
+                    }
+                    &:hover > ul.submenu {
+                        visibility: visible;
+                        opacity: 1;
+                        top: 100%;
+                    }
+                }
+                ul.submenu{
+                    position: absolute;
+                    width: 170px;
+                    @extend %header;
+                    left: 0;
+                    top: 90%;
+                    visibility: hidden;
+                    opacity: 0;
+                    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
+                    padding: 17px 0;
+                    // border-top: 5px solid $theme-color;
+                    @include transition(.3s);
+                    & > li{
+                        margin-left: 7px;
+                        display: block;
+                        & > a{
+                            padding: 6px 10px !important;
+                            font-size: 16px;
+                            color: #fdfdfd;
+                            &:hover{
+                                color:#fff;
+                                background: none;
+                                padding-left: 13px !important;
+                            }
+                            i{
+                                // @include transition(.4s);
+                            }
+                        }
+                    } 
+                }
+            }
+        }
+    }
+}
+
+.main-header .menu-wrapper2 .main-menu2 ul li a {
+	padding: 5px 11px;
+}
+
+
+//! header Sticky  & Responsive
+.header-sticky{
+    &.sticky-bar{
+        @extend %header;
+        &.sticky {
+            .main-menu{
+                ul {
+                    li{
+                        a {
+                            padding: 20px 20px !important;
+                        }
+                    }
+                }
+            }
+            // Small device sticky show padding
+            @media #{$md}{
+                padding: 15px 0px;
+            }
+            @media #{$sm}{
+                padding: 15px 0px;
+            }
+            @media #{$xs}{
+                padding: 15px 0px;
+            } 
+        }
+    }
+}
+
+//! Mobile Menu
+.mobile_menu {
+    position: absolute;
+    right: 0px;
+    width: 100%;
+    z-index: 99;
+    .slicknav_menu {
+        background: transparent;
+        margin-top: 0px !important;
+        .slicknav_btn {
+            top: -29px;
+            // mobile Menu button color
+            .slicknav_icon-bar {
+                background-color: $theme-color !important;
+            }
+        }
+        .slicknav_nav{
+            margin-top: 15px !important;
+            // box-shadow: 0 0 10px 3px rgba(141, 140, 140, 0.5);
+            a:hover {
+                background: transparent;
+                color: $theme-color;
+            }
+            a {
+                font-size: 15px;
+                padding: 7px 10px;
+            }
+            // Dropdown Menu button Padding None
+        .slicknav_item a {
+                padding: 0 !important;
+            }
+        }
+    }
+}

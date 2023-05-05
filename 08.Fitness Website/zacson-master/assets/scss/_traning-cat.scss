@@ -1,0 +1,90 @@
+
+.traning-categories{
+    .single-topic{
+        position: relative;
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            content: "";
+            background-color: rgba(0, 0, 0,.5);
+            z-index: 1;
+        }
+        // img
+        .topic-img{
+            @media #{$xs}{
+                margin-top: 67px;
+                margin-bottom: 61px;
+            }
+            img{
+                width: 100%;
+
+            }
+            border-radius: 12px;
+        }
+        // Caption
+        .topic-content-box {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transform: translateY(-50%);
+            height: 100%;
+            width: 100%;
+            transition: .4s;
+            z-index: 2;
+            .topic-content {
+                position: absolute;
+                top: 53%;
+                transform: translateY(-47%);
+                left: 0;
+                right: 0;
+                text-align: center;
+                h3 {
+            
+                    color: #ffffff;
+                    font-weight: 500;
+                    font-size: 50px;
+                    margin-bottom: 0px;
+                    text-transform: uppercase;
+                    @include transition(.4s);
+                    margin-bottom: 17px;
+                    @media #{$lg}{
+                        font-size: 41px;
+                    }
+                    @media #{$xs}{
+                        font-size: 28px;
+                    }
+                    // @media #{$md}{
+                    //     font-size: 25px;
+                    // }
+                }
+                p{
+                    font-size: 16px;
+                    color: #ffff;
+                    padding: 0 82px;
+                    line-height: 1.6;
+                    margin-bottom: 30px;
+                    @media #{$xs}{
+                        padding: 0 18px;
+                        br{
+                            display: none;
+                        }
+                    }
+                    @media #{$sm}{
+                        br{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

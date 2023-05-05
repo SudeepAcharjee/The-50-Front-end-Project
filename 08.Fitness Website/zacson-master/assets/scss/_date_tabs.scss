@@ -1,0 +1,158 @@
+.date-tabs{
+    // Tab Contenta
+    .tab-wrapper{
+        // display: flex;
+        @include flexbox();
+        @include justify-content(space-between);
+        @include flex-wrap(wrap);
+        @media #{$xs}{
+            justify-content: center;
+        }
+        .single-box{
+            @include flexbox();
+            width: 19%;
+            @media #{$md}{
+                width: 23%;
+                margin-bottom: 20px;
+            }
+            @media #{$sm}{
+                width: 47%;
+                margin-bottom: 20px;
+            }
+            @media #{$xs}{
+                width: 75%;
+                margin-bottom: 20px;
+            }
+            .single-caption{
+                background: #f7fdff;
+                @include transition(.4s);
+                // padding: 60px 0;
+                width: 100%;
+                padding: 50px 10px;
+                margin: 0 10px;
+                &:first-child{
+                   margin-left: 0;
+                }
+                &:last-child{
+                   margin-right: 0;
+                }
+                .caption {
+                    & > span{
+                        background: #000000;
+                        padding: 7px 20px;
+                        line-height: 1;
+                        margin-bottom: 10px;
+                        color: #fff;
+                        display: inline-block;
+                        font-size: 16px;
+                        font-family: $font_1;
+                    }
+                    h3{
+                        color: #2c234d;
+                        font-size: 30px;
+                        display: block;
+
+                    }
+                    p {
+                        color: #8f89a3;
+                        font-size: 14px;
+                        margin-bottom: 0px;
+                        display: block;
+                        & > span{
+                            color: #2c234d;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                // Hover
+                &:hover{
+                    background: #ff1313;
+                    .caption {
+                        & > span{
+                            background: #fff;
+                            color: #000;
+                        }
+                        h3{
+                            color: #fff;
+                        }
+                        p {
+                            color: #fff;
+                            & > span{
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+                // Active
+                &.active{
+                    background: #ff1313;
+                    .caption {
+                        & > span{
+                            background: #fff;
+                            color: #000;
+                        }
+                        h3{
+                            color: #fff;
+                        }
+                        p {
+                            color: #fff;
+                            & > span{
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    // Tabs Button Style
+    .properties__button{
+        background: #f7fdff;
+        padding: 33px 30px 12px 33px;
+        .nav-tabs {
+            border-bottom: 0;
+            .nav-item {
+                 display: block;
+                 text-transform: capitalize;
+                 font-weight: 500;
+             }
+            .nav-link {
+                color: #2c234d;
+                font-family: $font_1;
+                font-size: 25px;
+                border: 0;
+                margin-bottom: 31px;
+                position: relative;
+                padding: 12px 29px;
+                border-radius: 0;
+                margin-right: 15px;
+                @media #{$lg}{
+                   margin-bottom: 10px;
+                   padding: 7px 17px;
+                   margin-right: 11px;
+                }
+                @media #{$md}{
+
+                }
+                @media #{$sm}{
+                    padding: 6px 19px;
+                    margin-right: 0;
+                }
+                @media #{$xs}{
+                    padding: 7px 24px;
+                    margin-right: 8px;
+                    font-size: 19px;
+                }
+            }
+        }
+        .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+            color: #fff;
+            background: #ff1313;
+        }
+    }
+
+}
+.tab-pane{
+    @include transition(.6s);
+}

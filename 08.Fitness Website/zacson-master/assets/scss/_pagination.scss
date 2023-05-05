@@ -1,0 +1,57 @@
+
+// Pagination Area
+.pagination-area{
+    @media #{$lg}{
+        padding-bottom: 50px;
+    }
+    @media #{$md}{
+        padding-bottom: 50px;
+    }
+    @media #{$sm}{
+        padding-bottom: 50px;
+    }
+    @media #{$xs}{
+        padding-bottom: 50px;
+    }
+    .page-item {
+        margin: 0;
+    }
+    .page-item:first-child {margin: 0;}
+    .page-link {
+        border:0;
+        font-size: 15px;
+        text-align: center;
+        background: none;
+        box-shadow: none;
+        outline: 0;
+        color:#727272;
+        padding:16px 18px;
+        background: #fff;
+        margin: 0 7px;
+        border-radius: 50%;
+        border: 1px solid #f0f0f0;
+    }
+    .page-item:first-child .page-link {
+        margin-left: 0;
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+    }
+    .page-item:last-child .page-link {
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        border: 1px solid $theme-color;
+    }
+    .page-link:hover {
+        color:$theme-color;
+    }
+    .page-item.active .page-link {
+        z-index: 1;
+        border: 0;
+        position: relative;
+        box-shadow: none;
+        outline: 0;
+        background:#fff;
+        color:#727272;
+        border: 1px solid #f0f0f0;
+    }
+}

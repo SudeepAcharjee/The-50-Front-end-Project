@@ -1,0 +1,97 @@
+// About 02
+.about-area2{
+	.support-wrapper{
+		display: flex;
+		justify-content: start;
+		flex-wrap: wrap;
+		@media #{$lg}{
+			display: block;
+		}
+		// Left Content
+		.left-content2{
+			width: 38%;
+			padding-left: 60px;
+			@media #{$big_screen}{
+				width: 46%;
+				padding-left: 60px;
+			}
+			@media #{$large2}{
+				width: 35%;
+				padding-left: 60px;
+			}
+			@media #{$large3}{
+				width: 40%;
+				padding-left: 60px;
+			}
+			@media #{$lg}{
+				width: 60%;
+				padding-left: 60px;
+				padding-right: 60px;
+				padding-top: 50px;
+			}
+			@media #{$md}{
+				width: 82%;
+				padding-left: 50px;
+				padding-right: 60px;
+				padding-top: 50px;
+			}
+			@media #{$sm}{
+				width: 100%;
+				padding-left: 30px;
+				padding-right: 60px;
+				padding-top: 50px;
+			}
+			@media #{$xs}{
+				width: 100%;
+				padding-left: 30px;
+				padding-right: 60px;
+				padding-top: 50px;
+			}
+		}
+		// Right Content
+		.right-content2{
+			width: 40%;
+			margin-left: 100px;
+			@media #{$laptop}{
+				width: 46%;
+				margin-left: 50px;
+			}
+			@media #{$lg}{
+				width: 78%;
+				margin-left: 119px;
+				padding-top: 50px;
+			}
+			@media #{$md}{
+				width: 80%;
+				padding-top: 50px;
+				margin-left: 50px;
+				margin-right: 50px;
+			}
+			@media #{$md}{
+				width: 100%;
+				padding-top: 50px;
+				margin-left: 30px;
+				margin-right: 30px;
+			}
+			@media #{$sm}{
+				width: 100%;
+				padding-top: 50px;
+				margin-left: 30px;
+				margin-right: 30px;
+			}
+			@media #{$xs}{
+				width: 100%;
+				padding-top: 50px;
+				margin-left: 20px;
+				margin-right: 20px;
+			}
+
+			position: relative;
+			.right-img{
+				img{
+					width: 100%;
+				}
+			}
+		}
+	}
+}
