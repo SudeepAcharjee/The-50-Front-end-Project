@@ -20,8 +20,8 @@ This repository contains 50 frontend projects that were developed to help develo
 <a href="https://meme-generator-16.netlify.app/">16.Meme Generator</a><br>
 <a href="https://chatting-webapp-17.netlify.app/">17.Chatting App</a><br>
 <a href="https://onlinnne-form.netlify.app/">18.Online From</a>s<br>
-<a href="https://translator-19.netlify.app/">19.File Sharing App</a><br>
-20.Job finder and recuiter Website<br>
+<a href="https://translator-19.netlify.app/">19.Text-Translator</a><br>
+<a href="https://playable-piano20.netlify.app/">20.Playable Piano</a><br>
 21.Dating App<br>
 22.Amazone Clone<br>
 23.Central Bank Clone<br>
