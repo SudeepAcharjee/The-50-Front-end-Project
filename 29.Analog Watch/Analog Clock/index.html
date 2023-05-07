@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Analog Clock</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="clock">
+        <div style="--clr: #ff3d58; --h: 74px" id="hour" class="hand">
+          <i></i>
+        </div>
+        <div style="--clr: #00a6ff; --h: 84px" id="min" class="hand">
+          <i></i>
+        </div>
+        <div style="--clr: #ffffff; --h: 94px" id="sec" class="hand">
+          <i></i>
+        </div>
+
+        <span style="--i: 1"><b>1</b></span>
+        <span style="--i: 2"><b>2</b></span>
+        <span style="--i: 3"><b>3</b></span>
+        <span style="--i: 4"><b>4</b></span>
+        <span style="--i: 5"><b>5</b></span>
+        <span style="--i: 6"><b>6</b></span>
+        <span style="--i: 7"><b>7</b></span>
+        <span style="--i: 8"><b>8</b></span>
+        <span style="--i: 9"><b>9</b></span>
+        <span style="--i: 10"><b>10</b></span>
+        <span style="--i: 11"><b>11</b></span>
+        <span style="--i: 12"><b>12</b></span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
