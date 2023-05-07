@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Resizer JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="upload-box">
+        <input type="file" accept="image/*" hidden>
+        <img src="upload-icon.svg" alt="">
+        <p>Browse File to Upload</p>
+      </div>
+      <div class="content">
+        <div class="row sizes">
+          <div class="column width">
+            <label>Width</label>
+            <input type="number">
+          </div>
+          <div class="column height">
+            <label>Height</label>
+            <input type="number">
+          </div>
+        </div>
+        <div class="row checkboxes">
+          <div class="column ratio">
+            <input type="checkbox" id="ratio" checked>
+            <label for="ratio">Lock aspect ratio</label>
+          </div>
+          <div class="column quality">
+            <input type="checkbox" id="quality">
+            <label for="quality">Reduce quality</label>
+          </div>
+        </div>
+        <button class="download-btn">Download Image</button>
+      </div>
+    </div>
+
+  </body>
+</html>
