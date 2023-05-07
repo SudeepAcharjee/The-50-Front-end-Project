@@ -25,8 +25,8 @@ This repository contains 50 frontend projects that were developed to help develo
 <a href="https://image-resizer-21.netlify.app/">21.Image Resizer</a><br>
 <a href="https://dynamic-calander-22.netlify.app/">22.Dynamic Calender</a><br>
 <a href ="https://file-downoader-23.netlify.app/">23.File Downloader</a><br>
-24.Chess Game<br>
-25.Discord Clone<br>
+<a href="https://chess-game-24.netlify.app/">24.Chess Game</a><br>
+<a href="https://car-racing-25.netlify.app/">25.Car-Racing</a><br>
 26.Facebook Clone<br>
 27.Flipkart Clone<br>
 28.HDFC Clone<br>

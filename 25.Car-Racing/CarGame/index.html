@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background: url(27471.jpg) no-repeat center;
+        background-size: cover;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        /* overflow-y: hidden; */
+
+    }
+
+    #road {
+        /* border: 2px solid red; */
+        background: url(road.png) repeat-y;
+        height: 1200vh;
+        width: 50vw;
+        position: relative;
+        top: -80vh;
+        z-index: -9;
+        /* animation: roadanimation infinite 20s linear; */
+    }
+
+    #start {
+        position: absolute;
+        /* top: 60vh; */
+        /* left: 47vw; */
+        z-index: 100;
+        font-size: 2rem;
+        background-color: rgb(245, 99, 99);
+        color: white;
+        padding: 5px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    #score {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 2rem;
+        padding: 5px;
+        background-color: white;
+        border-radius: 20px;
+    }
+
+    #enemycar1 {
+        /* display: grid; */
+        /* place-items: center; */
+        position: relative;
+        width: 100px;
+        height: 100px;
+        left: 310px;
+        /* left: 230px; */
+        z-index: 1001;
+        /* animation: ecar1 infinite linear 3s; */
+    }
+
+    #enemycar2 {
+        /* display: grid;
+        place-items: center; */
+        position: relative;
+        width: 100px;
+        height: 100px;
+        left: 100px;
+        /* left: 150px; */
+        z-index: 1001;
+        /* animation: ecar2 infinite linear 4s; */
+
+    }
+
+    #enemycar3 {
+        /* display: grid;
+        place-items: center; */
+        position: relative;
+        width: 100px;
+        height: 100px;
+        left: -100px;
+        /* left: -50px; */
+        /* left: -140px; */
+        z-index: 1001;
+        /* animation: ecar3 infinite linear 6s; */
+
+    }
+
+    #enemycar4 {
+        /* display: grid;
+        place-items: center; */
+        position: relative;
+        width: 100px;
+        height: 100px;
+        left: -300px;
+        /* left: -330px; */
+        /* left: -220px; */
+        top: -250px;
+        z-index: 1001;
+        /* animation: ecar4 infinite linear 2s; */
+
+    }
+
+    .ecarimg {
+        width: 80px;
+        border: 2px solid red;
+    }
+
+    .mycarimg {
+        border: 2px solid red;
+        width: 80px;
+    }
+
+    #mycar {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        top: 15vh;
+        /* left: -1080px; */
+
+    }
+
+    @keyframes ecar1 {
+        0% {
+            top: -30vh;
+
+        }
+
+        100% {
+            top: 100vh;
+        }
+    }
+
+    @keyframes ecar2 {
+        0% {
+            top: -50vh;
+
+        }
+
+        100% {
+            top: 100vh;
+        }
+    }
+
+    @keyframes ecar3 {
+        0% {
+            top: -60vh;
+
+        }
+
+        100% {
+            top: 100vh;
+        }
+    }
+
+    @keyframes ecar4 {
+        0% {
+            top: -80vh;
+
+        }
+
+        100% {
+            top: 100vh;
+        }
+    }
+
+    @keyframes roadanimation {
+        0% {
+            top: -1100vh;
+
+        }
+
+        100% {
+            top: -200vh;
+        }
+    }
+</style>
+
+<body>
+
+    <div id="score">Score : 0</div>
+    <button id="start">Start</button>
+
+    <div>
+        <div id="enemycar1"><img id="ecarimg1" class="ecarimg" src="car2.png" alt=""></div>
+        <div id="enemycar2"><img id="ecarimg2" class="ecarimg" src="car3.png" alt=""></div>
+        <div id="enemycar3"><img id="ecarimg3" class="ecarimg" src="car2.png" alt=""></div>
+        <div id="enemycar4"><img id="ecarimg4" class="ecarimg" src="car3.png" alt=""></div>
+    </div>
+
+    <div id="mycar"><img id="mycarimg" class="mycarimg" src="car1.png" alt=""></div>
+    <div id="road"></div>
+
+
+</body>
+
+<script>
+
+
+    document.getElementById("start").addEventListener("click", function () {
+
+        document.getElementById("start").style.display = 'none'
+        document.getElementById("road").style.animation = 'roadanimation 20s linear infinite'
+
+
+        setInterval(() => {
+            num = Math.floor(Math.random() * (350 - 230 + 1) + 230)
+            document.getElementById("enemycar1").style.left = `${num}px`
+
+        }, 3000)
+        setInterval(() => {
+            num = Math.floor(Math.random() * (150 - 50 + 1) + 50)
+            document.getElementById("enemycar2").style.left = `${num}px`
+
+        }, 6000)
+        setInterval(() => {
+            num = Math.floor(Math.random() * (-50 + 140 + 1) - 140)
+            document.getElementById("enemycar3").style.left = `${num}px`
+
+        }, 5000)
+        setInterval(() => {
+            num = Math.floor(Math.random() * (-220 + 330 + 1) - 330)
+            document.getElementById("enemycar4").style.left = `${num}px`
+
+        }, 4000)
+
+
+        document.getElementById("enemycar1").style.animation = 'ecar1 3s linear infinite'
+        document.getElementById("enemycar2").style.animation = 'ecar2 6s linear infinite'
+        document.getElementById("enemycar3").style.animation = 'ecar3 5s linear infinite'
+        document.getElementById("enemycar4").style.animation = 'ecar4 4s linear infinite'
+
+
+        let t = 15
+        let l = 0
+
+        window.addEventListener("keydown", function (x) {
+
+            if (x.keyCode == 87) {
+                t = t - 3
+                // alert("w")
+
+            }
+            if (x.keyCode == 65) {
+                l = l - 1
+                // alert("w")
+            }
+            if (x.keyCode == 83) {
+                t = t + 3
+                // alert("w")
+            }
+            if (x.keyCode == 68) {
+                l = l + 1
+                // alert("w")
+            }
+            document.getElementById("mycar").style.top = `${t}vh`
+            document.getElementById("mycar").style.left = `${l}vw`
+        })
+
+        n = 0
+        setInterval(() => {
+
+            document.getElementById("score").innerText = `Score : ${n}`
+            n = n + 1
+
+
+
+            var ecar1_left = Math.abs(document.getElementById("ecarimg1").getBoundingClientRect().left);
+            var ecar1_right = Math.abs(document.getElementById("ecarimg1").getBoundingClientRect().right);
+            var ecar1_top = Math.abs(document.getElementById("ecarimg1").getBoundingClientRect().top);
+            var ecar1_bottom = Math.abs(document.getElementById("ecarimg1").getBoundingClientRect().bottom);
+
+            var ecar2_left = Math.abs(document.getElementById("ecarimg2").getBoundingClientRect().left);
+            var ecar2_right = Math.abs(document.getElementById("ecarimg2").getBoundingClientRect().right);
+            var ecar2_top = Math.abs(document.getElementById("ecarimg2").getBoundingClientRect().top);
+            var ecar2_bottom = Math.abs(document.getElementById("ecarimg2").getBoundingClientRect().bottom);
+
+            var ecar3_left = Math.abs(document.getElementById("ecarimg3").getBoundingClientRect().left);
+            var ecar3_right = Math.abs(document.getElementById("ecarimg3").getBoundingClientRect().right);
+            var ecar3_top = Math.abs(document.getElementById("ecarimg3").getBoundingClientRect().top);
+            var ecar3_bottom = Math.abs(document.getElementById("ecarimg3").getBoundingClientRect().bottom);
+
+            var ecar4_left = Math.abs(document.getElementById("ecarimg4").getBoundingClientRect().left);
+            var ecar4_right = Math.abs(document.getElementById("ecarimg4").getBoundingClientRect().right);
+            var ecar4_top = Math.abs(document.getElementById("ecarimg4").getBoundingClientRect().top);
+            var ecar4_bottom = Math.abs(document.getElementById("ecarimg4").getBoundingClientRect().bottom);
+
+            var mycar_left = Math.abs(document.getElementById("mycarimg").getBoundingClientRect().left);
+            var mycar_right = Math.abs(document.getElementById("mycarimg").getBoundingClientRect().right);
+            var mycar_top = Math.abs(document.getElementById("mycarimg").getBoundingClientRect().top);
+            var mycar_bottom = Math.abs(document.getElementById("mycarimg").getBoundingClientRect().bottom);
+
+
+            if (mycar_left < 450 || mycar_right > 1130 || mycar_top < 20 || mycar_bottom > 690) {
+                setTimeout(() => {
+                    alert(`GAME OVER!`)
+                })
+                location.reload()
+
+            }
+            if (((ecar1_left < mycar_left && mycar_left < ecar1_right) || (ecar1_left < mycar_right && mycar_right < ecar1_right)) && ((ecar1_top < mycar_top && mycar_top < ecar1_bottom) || (ecar1_top < mycar_bottom && mycar_bottom < ecar1_bottom))) {
+
+                setTimeout(() => {
+                    alert(`GAME OVER!`)
+                })
+                location.reload()
+
+            }
+            if (((ecar2_left < mycar_left && mycar_left < ecar2_right) || (ecar2_left < mycar_right && mycar_right < ecar2_right)) && ((ecar2_top < mycar_top && mycar_top < ecar2_bottom) || (ecar2_top < mycar_bottom && mycar_bottom < ecar2_bottom))) {
+
+                setTimeout(() => {
+                    alert(`GAME OVER!`)
+                })
+                location.reload()
+
+            }
+            if (((ecar3_left < mycar_left && mycar_left < ecar3_right) || (ecar3_left < mycar_right && mycar_right < ecar3_right)) && ((ecar3_top < mycar_top && mycar_top < ecar3_bottom) || (ecar3_top < mycar_bottom && mycar_bottom < ecar3_bottom))) {
+
+                setTimeout(() => {
+                    alert(`GAME OVER!`)
+                })
+                location.reload()
+
+            }
+            if (((ecar4_left < mycar_left && mycar_left < ecar4_right) || (ecar4_left < mycar_right && mycar_right < ecar4_right)) && ((ecar4_top < mycar_top && mycar_top < ecar4_bottom) || (ecar4_top < mycar_bottom && mycar_bottom < ecar4_bottom))) {
+
+                setTimeout(() => {
+                    alert(`GAME OVER!`)
+                })
+                location.reload()
+
+            }
+
+
+        }, 100)
+
+
+
+    })
+
+</script>
+
+</html>
