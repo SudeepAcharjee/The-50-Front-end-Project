@@ -32,7 +32,7 @@ This repository contains 50 frontend projects that were developed to help develo
 <a href="https://word-guessing-game-28.netlify.app/">28.Word-Guessing Game</a><br>
 <a href="https://analog-watch-29.netlify.app/">29.Analog Watch</a><br>
 <a href="https://photo-editor-30.netlify.app/">30.Photo Editor</a><br>
-31.Music Player<br>
+<a href="https://music-player-31.netlify.app/">31.Music Player</a><br>
 32.Myntra Clone<br>
 33.Netflix clone<br>
 34.Note App<br>
