@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="437" height="316" viewBox="0 0 437 316">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.047" y1="0.043" x2="1.032" y2="0.924" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#c2c2c2"/>
+      <stop offset="1" stop-color="#9f9f9f"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_395" data-name="Group 395" transform="translate(-561 -195)">
+    <path id="Path_134" data-name="Path 134" d="M5,0H432a5,5,0,0,1,5,5V311a5,5,0,0,1-5,5H5a5,5,0,0,1-5-5V5A5,5,0,0,1,5,0Z" transform="translate(561 195)" fill="#f2f2f2"/>
+    <g id="layer1" transform="translate(292.867 165.465)" opacity="0.55">
+      <path id="rect1017" d="M7.014,0H168.471a7.014,7.014,0,0,1,7.014,7.014v65a7.014,7.014,0,0,1-7.014,7.014H7.014A7.014,7.014,0,0,1,0,72.01v-65A7.014,7.014,0,0,1,7.014,0Z" transform="translate(399.134 122.791)" fill="#f2f2f2"/>
+      <g id="g1015" transform="translate(440.421 122.536)">
+        <rect id="rect1002" width="43.895" height="48.142" rx="8.397" transform="translate(0 33.337) rotate(-16.343)" fill="#9f9f9f"/>
+        <g id="g1000" transform="translate(32.701 0) rotate(16.321)">
+          <rect id="rect961" width="57.382" height="61.709" rx="4.596" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="5.398" fill="url(#linear-gradient)"/>
+          <g id="g875" transform="translate(6.344 5.617)">
+            <rect id="rect3338" width="45.119" height="41.342" transform="translate(0)" fill="#ccc" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.257"/>
+            <rect id="rect3342" width="45.119" height="19.293" transform="translate(0)" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.257"/>
+            <path id="path3344" d="M0,13.781,3.534,8.862,9.095,4.713,10.554,6.42,11.8,2.866l.753-.274L13.781,0,30.318,16.537" transform="translate(2.756 5.512)" fill="#ccc" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.257" fill-rule="evenodd"/>
+            <path id="path3390-0" d="M4.686,0q.564,2.27,1,4.571.328,1.745.58,3.5L4.236,7.416,0,4.713.489,8.978.341,11.256l.924,2.791,6.724-1.08,7.723-1.942L11.319,3.911l-.891,1.372L7.936,3.25Z" transform="translate(11.851 5.512)" fill="#b3b3b3" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.257" fill-rule="evenodd"/>
+            <path id="path3358" d="M0,13.781,7.524,6.943l1.7-.889L11.4,1.994,13.781,0,30.318,16.537" transform="translate(13.781 8.269)" fill="#ccc" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.257" fill-rule="evenodd"/>
+            <path id="path3386" d="M0,0,3.3,7.434v5.533l2.063,1.788a7.493,7.493,0,0,1,2.062-1.443,25.381,25.381,0,0,1,4.334-1.251,4.781,4.781,0,0,0,1.673-.723,2.741,2.741,0,0,0,.347-.312H11.025L7.3,7.3,4.559,2.8l-.942.812Z" transform="translate(27.562 8.269)" fill="#b3b3b3" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.257" fill-rule="evenodd"/>
+            <path id="path3370" d="M13.781,22.049c-.038-.882-.81-1.618,1.573-2.818,2.924-1.472,11.566-3.3,13.979-5.511,1.785-1.638-6.469-3.461-5.055-5.427C24.92,7.4,29.7,6.459,31.825,5.512c2.013-.9,1.391-1.819,2.885-2.754C36.154,1.856,40.99.942,41.343,0c-.957.967-6.324,1.875-8.269,2.756-2.052.93-1.972,1.831-4.541,2.709-2.768.946-8.19,1.888-9.436,2.8-2.61,1.917,4.305,3.914,1.489,5.512-3.815,2.165-13.72,3.978-17.829,5.512C-.083,20.354.146,20.924,0,22.049" transform="translate(0 19.293)" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.257" fill-rule="evenodd"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <text id="text1021" transform="translate(780 411.768)" fill="#bfbfbf" font-size="16" font-family="Poppins-Regular, Poppins"><tspan x="-85.488" y="0">Choose Image to Edit</tspan></text>
+  </g>
+</svg>

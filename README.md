@@ -31,7 +31,7 @@ This repository contains 50 frontend projects that were developed to help develo
 <a href="https://snake-lader-game-27.netlify.app/">27.snake-Lander Game</a><br>
 <a href="https://word-guessing-game-28.netlify.app/">28.Word-Guessing Game</a><br>
 <a href="https://analog-watch-29.netlify.app/">29.Analog Watch</a><br>
-30.Meesho Clone<br>
+<a href="https://photo-editor-30.netlify.app/">30.Photo Editor</a><br>
 31.Music Player<br>
 32.Myntra Clone<br>
 33.Netflix clone<br>
