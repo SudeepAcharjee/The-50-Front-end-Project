@@ -22,7 +22,7 @@ This repository contains 50 frontend projects that were developed to help develo
 <a href="https://onlinnne-form.netlify.app/">18.Online From</a><br>
 <a href="https://translator-19.netlify.app/">19.Text-Translator</a><br>
 <a href="https://playable-piano20.netlify.app/">20.Playable Piano</a><br>
-21.Dating App<br>
+<a href="https://image-resizer-21.netlify.app/">21.Image Resizer</a><br>
 22.Amazone Clone<br>
 23.Central Bank Clone<br>
 24.Chess Game<br>
