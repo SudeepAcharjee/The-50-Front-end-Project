@@ -49,7 +49,7 @@ This repository contains 50 frontend projects that were developed to help develo
 45.Whatsapp Clone<br>
 46.Youtube Clone<br>
 47.Youtube Video Downloader<br>
-48.Online Quiz Website<br>
+<a href="https://online-quiz-48.netlify.app/">48.Online Quiz Website</a><br>
 49.Dragon Game<br>
 <a href="https://drag-drop-image.netlify.app/">50.Drag&Drop Image</a><br>
 # Installation
