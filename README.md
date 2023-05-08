@@ -34,7 +34,7 @@ This repository contains 50 frontend projects that were developed to help develo
 <a href="https://photo-editor-30.netlify.app/">30.Photo Editor</a><br>
 <a href="https://music-player-31.netlify.app/">31.Music Player</a><br>
 <a href="https://calculator-32.netlify.app/">32.Calculator</a><br>
-33.Netflix clone<br>
+<a href="https://rock-paper-scissors-game-33.netlify.app/">33.Rock-Paper-Scissors Game</a><br>
 34.Note App<br>
 35.Pintest Clone<br>
 36.SBI Clone<br>
