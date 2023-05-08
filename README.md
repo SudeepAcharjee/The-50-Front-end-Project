@@ -38,7 +38,7 @@ This repository contains 50 frontend projects that were developed to help develo
 <a href="https://note-app-34.netlify.app/">34.Note App</a><br>
 <a href="https://text-file-saver.netlify.app/">35.Text-File Saver</a><br>
 <a href="https://dictionary-webapp-36.netlify.app/">36.Dictionay App</a><br>
-37.Snake Game<br>
+<a href="https://snake-game-37.netlify.app/">37.Snake Game</a><br>
 38.Stock Trading App<br>
 39.Stop watch<br>
 40.Text to Word Convertor<br>
