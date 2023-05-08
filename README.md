@@ -44,7 +44,7 @@ This repository contains 50 frontend projects that were developed to help develo
 <a href="https://audio-to-text-40.netlify.app/">40.Text to Word Convertor</a><br>
 <a href="https://todo-list-41.netlify.app/">41.Todo List App</a><br>
 <a href="https://twitter-clone-42.netlify.app/">42.Twitter Clone</a><br>
-43.Typing Speed Test App<br>
+<a href="https://typing-speed-testbysudeep.netlify.app/">43.Typing Speed Test App</a><br>
 44.Video to Audio Convertor<br>
 45.Whatsapp Clone<br>
 46.Youtube Clone<br>

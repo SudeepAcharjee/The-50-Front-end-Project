@@ -1,0 +1,126 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background: #fff;
+	overflow: hidden;
+}
+
+#wrapper {
+	margin: 0 auto;
+	width: 1200px;
+}
+
+#timer {
+	text-align: center;
+	padding: 10px;
+	font-family: helvetica;
+	font-size: 25px;
+	background: #2ECC71;
+	opacity: 0.8;
+	display: none;
+	color: #fff;
+	letter-spacing: 2.5px;
+	font-weight: 100;
+}
+
+#paraContainer {
+	display: none;
+	width: 550px;
+	height: 600px;
+	margin: 25px 10px;
+	font-family: helvetica;
+	font-size: 18px;
+	line-height: 1.5;
+	border: 2px solid #2ECC71;
+	border-radius: 5px;
+	padding: 10px;
+	overflow-y: scroll;
+}
+
+#textArea {
+	display: none;
+	margin: 25px 10px;
+	width: 550px;
+	height: 600px;
+	resize:none;
+	font-family: helvetica;
+	font-size: 18px;
+	line-height: 1.5;
+	padding: 10px;
+	outline: none;
+	border: 2px solid #2ECC71;
+	border-radius: 5px;
+}
+
+#startWindow{
+	background: rgba(0,0,0,0.7);
+  	height: 100%;
+  	width: 100%;
+  	top: 0;
+  	left: 0;
+	position: absolute;
+	font-family: helvetica;
+	padding-top: 100px;
+}
+
+#newTestWindow{
+	background: rgba(0,0,0,0.7);
+  	height: 100%;
+  	width: 100%;
+  	top: 0;
+  	left: 0;
+	position: absolute;
+	font-family: helvetica;
+	padding-top: 100px;
+	overflow: hidden;
+	display: none;
+}
+
+
+.modalBox {
+	margin: 0 auto;
+	width: 500px;
+	background: #fff;
+	text-align: center;
+	border: 2px solid #C0392B;
+	border-radius: 10px;
+	padding: 20px;
+	line-height: 1.5;
+}
+
+.modalBox h1{
+	font-size: 35px;
+	text-align: center;
+	font-weight: 100;
+}
+
+.modalBox p {
+	font-size: 18px;
+	text-align: center;
+	font-weight: 100;
+	padding: 20px 0;
+}
+
+.modalBox button {
+	outline: none;
+	padding: 15px;
+	border-style: none;
+	cursor: pointer;
+	font-size: 18px;
+	border-radius: 5px;
+	background: #22A7F0;
+	border: 2px solid transparent;
+	color: #fff;
+	font-weight: 100;
+}
+
+.modalBox button:hover {
+	background: #fff;
+	border: 2px solid #22A7F0;
+	color: #22A7F0;
+	transition: 0.2s;
+}
+
