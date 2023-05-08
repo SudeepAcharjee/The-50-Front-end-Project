@@ -40,7 +40,7 @@ This repository contains 50 frontend projects that were developed to help develo
 <a href="https://dictionary-webapp-36.netlify.app/">36.Dictionay App</a><br>
 <a href="https://snake-game-37.netlify.app/">37.Snake Game</a><br>
 <a href="https://trading-app-38.netlify.app/">38.Stock Trading App</a><br>
-39.Stop watch<br>
+<a href="https://stop-watch-39.netlify.app/">39.Stop watch</a><br>
 40.Text to Word Convertor<br>
 <a href="https://todo-list-41.netlify.app/">41.Todo List App</a><br>
 42.Twitter Clone<br>
