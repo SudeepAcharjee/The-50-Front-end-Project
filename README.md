@@ -43,7 +43,7 @@ This repository contains 50 frontend projects that were developed to help develo
 <a href="https://stop-watch-39.netlify.app/">39.Stop watch</a><br>
 <a href="https://audio-to-text-40.netlify.app/">40.Text to Word Convertor</a><br>
 <a href="https://todo-list-41.netlify.app/">41.Todo List App</a><br>
-42.Twitter Clone<br>
+<a href="https://twitter-clone-42.netlify.app/">42.Twitter Clone</a><br>
 43.Typing Speed Test App<br>
 44.Video to Audio Convertor<br>
 45.Whatsapp Clone<br>
