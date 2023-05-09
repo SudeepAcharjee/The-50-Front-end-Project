@@ -48,7 +48,7 @@ This repository contains 50 frontend projects that were developed to help develo
 <a href="https://admin-panel-dashboard-44.netlify.app/">44.Admin Panel Dashboard</a><br>
 45.Whatsapp Clone<br>
 46.Youtube Clone<br>
-47.Youtube Video Downloader<br>
+<a href="https://random-qoute-generator-47.netlify.app/">47.Random Qoute Generator</a><br>
 <a href="https://online-quiz-48.netlify.app/">48.Online Quiz Website</a><br>
 <a href="https://dino-game-49.netlify.app/">49.Dragon Game<br>
 <a href="https://drag-drop-image.netlify.app/">50.Drag&Drop Image</a><br>
