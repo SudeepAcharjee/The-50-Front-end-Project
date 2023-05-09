@@ -46,7 +46,7 @@ This repository contains 50 frontend projects that were developed to help develo
 <a href="https://twitter-clone-42.netlify.app/">42.Twitter Clone</a><br>
 <a href="https://typing-speed-testbysudeep.netlify.app/">43.Typing Speed Test App</a><br>
 <a href="https://admin-panel-dashboard-44.netlify.app/">44.Admin Panel Dashboard</a><br>
-45.Whatsapp Clone<br>
+<a href="https://whatsapp-clone-45.netlify.app/">45.Whatsapp Clone</a><br>
 46.Youtube Clone<br>
 <a href="https://random-qoute-generator-47.netlify.app/">47.Random Qoute Generator</a><br>
 <a href="https://online-quiz-48.netlify.app/">48.Online Quiz Website</a><br>

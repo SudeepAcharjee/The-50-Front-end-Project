@@ -1,0 +1,258 @@
+*{
+    margin:0;
+    padding:0;
+    user-select:none;
+    font-family:sans-serif;
+    
+}
+
+:root{
+    --green:#218c74;
+    --green2:#0be881;
+    --grey:#b2bec3;
+}
+
+.jsOff{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100vw;
+    z-index:10;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#loader{
+   height:100vh;
+   width:100vw;
+   background:#fff;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+}
+#loader div{
+   position:absolute;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   flex-direction:column;
+   font-size:1.6em;
+   letter-spacing:3px;
+   color:var(--green2);
+}
+#loader div img{
+    width:100px;
+}
+#loader .by{
+    align-self:flex-end;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+#loader .by span:nth-child(1){
+    color:var(--grey);
+}
+#loader .by span:nth-child(2){
+    color:var(--green2);
+    font-size:1.6em;
+    letter-spacing:4px;
+}
+
+#main{
+    display:none;
+    background:#fff;
+}
+
+.n1{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:1.3em;
+    background:var(--green);
+    color:#fff;
+}
+.n1 .tab{
+    display:flex;
+    justify-content:stretch;
+}
+.n1 .tab *, .n1 .title{
+    padding:10px;
+}
+.n1 .title{
+    font-weight:bold;
+}
+.n1 .list{
+    position:fixed;
+    color:#000;
+    top:2px;
+    right:2px;
+    font-size:18px;
+    z-index:12;
+    background:#fff;
+    border-radius:2px;
+    box-shadow:0 0 2px #000;
+    clip-path:circle(30% at 100% 0%);
+    opacity:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-direction:column;
+    transition:clip-path 0.3s linear, opacity 0.2s linear;
+}
+.n1 .list span{
+    padding:15px;
+}
+.n1 .searchbox{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#fff;
+    color:var(--green);
+    clip-path:circle(0% at 50% 50%);
+    transition:clip-path 0.5s ease-out;
+    display:flex;
+    z-index:11;
+    justify-content:space-evenly;
+    align-items:center;
+}
+.n1 .searchbox .close{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.n1 .searchbox input{
+    border:none;
+    outline:none;
+    height:100%;
+    width:80%;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+}
+
+
+.n2{
+    position:sticky;
+    top:0;
+    color:#fff;
+    background:var(--green);
+    transition:transform 0.7s linear;
+    display:flex;
+    justify-content:space-evenly;
+}
+.n2 .tab{
+    width:90%;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+}
+.n2 .tab .ripple{
+    position:relative;
+    padding:3%;
+    width:90%;
+    text-align:center;
+}
+.n2 .tab .t1 .dash{
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    height:5px;
+    width:100%;
+    background:#fff;
+    z-index:10;
+    transition:transform 0.2s linear;
+}
+.n2 .fa{
+    color:rgba(255,255,255,0.7);   
+    padding:3%;
+    text-align:center;
+}
+
+.ripple{
+    transition:background 0.5s;
+}
+.ripple:hover{
+    background:var(--green) radial-gradient(circle, transparent 1%, var(--green) 1%) center/15000%;
+}
+.ripple:active{
+    background-color:#fff;
+    background-size: 100%;
+    transition: background 0s;
+}
+
+section .chat{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+section .chat .container{
+    padding:6px;
+    width:100%;
+    border-bottom:1px solid rgba(0,0,0,0.08);
+}
+section .chat .container *{
+    padding:4px;
+}
+section .chat .container .info{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+section .chat .container .info span:nth-child(1){
+    font-weight:bolder;
+    font-size:1.2em;
+}
+section .chat .container .info span:nth-child(2){
+    font-weight:thin;
+    font-size:0.8em;
+    color:rgba(20,20,20,0.6);
+}
+section .chat .message{
+    font-weight:thin;
+    font-size:0.98em;
+    color:rgba(20,20,20,0.6);
+}
+
+section .chat .avatar img{
+    height:60px;
+    width:60px;
+    border-radius:50%;
+    padding:10px;
+}
+
+.fa-commenting-o{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    font-size:1.7em;
+    padding:15px;
+    background:var(--green2);
+    color:#fff;
+    border-radius:50%;
+}
+
+section .chat .Coffin .message{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+section .chat .Coffin .message span:nth-child(2){
+    height:15px;    
+    width:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    background:var(--green2);
+    border-radius:50%;
+}
+section .chat .Coffin .info span:nth-child(2){
+    color:var(--green2);
+    font-weight:bold;
+}
